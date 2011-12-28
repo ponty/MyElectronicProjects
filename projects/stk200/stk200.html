@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>10. STK200 AVR programmer &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
+    <link rel="next" title="11. USBasp AVR programmer" href="../usbasp/usbasp.html" />
+    <link rel="prev" title="9. serial port monitor" href="../serialmonitor/serialmonitor.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../usbasp/usbasp.html" title="11. USBasp AVR programmer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../serialmonitor/serialmonitor.html" title="9. serial port monitor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="stk200-avr-programmer">
+<h1>10. STK200 AVR programmer<a class="headerlink" href="#stk200-avr-programmer" title="Permalink to this headline">¶</a></h1>
+<p>Status: OK</p>
+<p>It is used for programming AVR controller and Arduino compatible boards using the parallel port.</p>
+<div class="section" id="test-on-ubuntu">
+<h2>10.1. Test on Ubuntu<a class="headerlink" href="#test-on-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>checking:</p>
+<div class="highlight-python"><pre>$ avrdude -patmega88 -cstk200
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e930a
+
+avrdude: safemode: Fuses OK
+
+avrdude done.  Thank you.</pre>
+</div>
+</div>
+<div class="section" id="image">
+<h2>10.2. Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/img12.jpg" src="../../_images/img12.jpg" />
+<img alt="../../_images/img21.jpg" src="../../_images/img21.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="schematic">
+<h2>10.3. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/stk200_sch_20.png" src="../../_images/stk200_sch_20.png" />
+</div></blockquote>
+</div>
+<div class="section" id="board">
+<h2>10.4. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<p>Normal, bottom mirrored, wires only:</p>
+<blockquote>
+<div><img alt="../../_images/stk200_brd_21.png" src="../../_images/stk200_brd_21.png" />
+<img alt="../../_images/stk200_brd_22.png" src="../../_images/stk200_brd_22.png" />
+<img alt="../../_images/stk200_brd_23.png" src="../../_images/stk200_brd_23.png" />
+</div></blockquote>
+</div>
+<div class="section" id="partlist">
+<h2>10.5. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<caption></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">part</th>
+<th class="head">value</th>
+<th class="head">position</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C1</td>
+<td>100p</td>
+<td>(2.3 0.95)</td>
+</tr>
+<tr class="row-odd"><td>C3</td>
+<td>100n</td>
+<td>(2.3 1.95)</td>
+</tr>
+<tr class="row-even"><td>C5</td>
+<td>100p</td>
+<td>(3 1.8)</td>
+</tr>
+<tr class="row-odd"><td>C6</td>
+<td>100p</td>
+<td>(3.4 1.1)</td>
+</tr>
+<tr class="row-even"><td>D1</td>
+<td>1N4148DO35-7</td>
+<td>(3.45 1.9)</td>
+</tr>
+<tr class="row-odd"><td>IC1</td>
+<td>74HC244N</td>
+<td>(1.95 1.45)</td>
+</tr>
+<tr class="row-even"><td>LED1</td>
+<td>red</td>
+<td>(3.2 2.05)</td>
+</tr>
+<tr class="row-odd"><td>LED2</td>
+<td>red</td>
+<td>(2.8 2.05)</td>
+</tr>
+<tr class="row-even"><td>R1</td>
+<td>330</td>
+<td>(1.4 1.6)</td>
+</tr>
+<tr class="row-odd"><td>R2</td>
+<td>150</td>
+<td>(1.3 1.4)</td>
+</tr>
+<tr class="row-even"><td>R3</td>
+<td>330</td>
+<td>(1.2 1.55)</td>
+</tr>
+<tr class="row-odd"><td>R4</td>
+<td>1k</td>
+<td>(2.7 1.8)</td>
+</tr>
+<tr class="row-even"><td>R5</td>
+<td>100k</td>
+<td>(3.2 1.45)</td>
+</tr>
+<tr class="row-odd"><td>R6</td>
+<td>330</td>
+<td>(1.4 1.25)</td>
+</tr>
+<tr class="row-even"><td>R7</td>
+<td>100k</td>
+<td>(2.6 1.85)</td>
+</tr>
+<tr class="row-odd"><td>R8</td>
+<td>330</td>
+<td>(1 1.55)</td>
+</tr>
+<tr class="row-even"><td>R9</td>
+<td>330</td>
+<td>(2.9 1.1)</td>
+</tr>
+<tr class="row-odd"><td>R10</td>
+<td>1k</td>
+<td>(3.1 2)</td>
+</tr>
+<tr class="row-even"><td>R12</td>
+<td>330</td>
+<td>(2.5 2)</td>
+</tr>
+<tr class="row-odd"><td>R13</td>
+<td>100k</td>
+<td>(1.95 2.05)</td>
+</tr>
+<tr class="row-even"><td>R14</td>
+<td>330</td>
+<td>(2.6 1.65)</td>
+</tr>
+<tr class="row-odd"><td>R15</td>
+<td>330</td>
+<td>(2.4 1.85)</td>
+</tr>
+<tr class="row-even"><td>R16</td>
+<td>330</td>
+<td>(2.9 1.3)</td>
+</tr>
+<tr class="row-odd"><td>X1</td>
+<td>&nbsp;</td>
+<td>(0.2 1.4)</td>
+</tr>
+<tr class="row-even"><td>X2</td>
+<td>&nbsp;</td>
+<td>(3.95 1.4)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="d-view">
+<h2>10.6. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="front">
+<h3>10.6.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/stk200_brd_3d_24.png" src="../../_images/stk200_brd_3d_24.png" />
+</div></blockquote>
+</div>
+<div class="section" id="right-side">
+<h3>10.6.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/stk200_brd_3d_25.png" src="../../_images/stk200_brd_3d_25.png" />
+</div></blockquote>
+</div>
+<div class="section" id="left-side">
+<h3>10.6.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/stk200_brd_3d_26.png" src="../../_images/stk200_brd_3d_26.png" />
+</div></blockquote>
+</div>
+<div class="section" id="bottom">
+<h3>10.6.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/stk200_brd_3d_27.png" src="../../_images/stk200_brd_3d_27.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="sources">
+<h2>10.7. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.lancos.com/prog.html">original design</a></p>
+<blockquote>
+<div><img alt="http://www.lancos.com/e2p/betterSTK200.gif" src="http://www.lancos.com/e2p/betterSTK200.gif" />
+</div></blockquote>
+<p><a class="reference external" href="http://logix4u.net/Legacy_Ports/Parallel_Port/A_tutorial_on_Parallel_port_Interfacing.html">Parallel port specification</a></p>
+<blockquote>
+<div><img alt="http://logix4u.net/images/stories/legacy_ports/parallel_port/tutorial/parallel.gif" src="http://logix4u.net/images/stories/legacy_ports/parallel_port/tutorial/parallel.gif" />
+</div></blockquote>
+<p><a class="reference external" href="http://image.pinout.net/pinout_10_pin_files/connector_pinout.php?image=avr_icsp.png">ISP pinout</a></p>
+<blockquote>
+<div><img alt="http://image.pinout.net/pinout_10_pin_files/avr_icsp.png" src="http://image.pinout.net/pinout_10_pin_files/avr_icsp.png" />
+</div></blockquote>
+<dl class="docutils">
+<dt>similar designs:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.sbprojects.com/projects/stk200/">http://www.sbprojects.com/projects/stk200/</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">10. STK200 AVR programmer</a><ul>
+<li><a class="reference internal" href="#test-on-ubuntu">10.1. Test on Ubuntu</a></li>
+<li><a class="reference internal" href="#image">10.2. Image</a></li>
+<li><a class="reference internal" href="#schematic">10.3. Schematic</a></li>
+<li><a class="reference internal" href="#board">10.4. Board</a></li>
+<li><a class="reference internal" href="#partlist">10.5. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">10.6. 3D view</a><ul>
+<li><a class="reference internal" href="#front">10.6.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">10.6.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">10.6.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">10.6.4. Bottom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sources">10.7. Sources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../serialmonitor/serialmonitor.html"
+                        title="previous chapter">9. serial port monitor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../usbasp/usbasp.html"
+                        title="next chapter">11. USBasp AVR programmer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/projects/stk200/stk200.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../usbasp/usbasp.html" title="11. USBasp AVR programmer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../serialmonitor/serialmonitor.html" title="9. serial port monitor"
+             >previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

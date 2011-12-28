@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>11. USBasp AVR programmer &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
+    <link rel="next" title="12. USB LED" href="../usbled/usbled.html" />
+    <link rel="prev" title="10. STK200 AVR programmer" href="../stk200/stk200.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../usbled/usbled.html" title="12. USB LED"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../stk200/stk200.html" title="10. STK200 AVR programmer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="usbasp-avr-programmer">
+<h1>11. USBasp AVR programmer<a class="headerlink" href="#usbasp-avr-programmer" title="Permalink to this headline">¶</a></h1>
+<p>Status: OK</p>
+<p>It is used for programming AVR controller and Arduino compatible boards using the USB port.</p>
+<p>firmware, design: <a class="reference external" href="http://www.fischl.de/usbasp/">http://www.fischl.de/usbasp/</a></p>
+<p>USBasp is based on V-USB (<a class="reference external" href="http://www.obdev.at/products/vusb/index.html">http://www.obdev.at/products/vusb/index.html</a>)</p>
+<div class="section" id="v-usb-hardware-recommendation">
+<h2>11.1. V-USB hardware recommendation<a class="headerlink" href="#v-usb-hardware-recommendation" title="Permalink to this headline">¶</a></h2>
+<p>only difference to USBasp: 1.5 kΩ pull-up resistor</p>
+<p><a class="reference external" href="http://vusb.wikidot.com/hardware">http://vusb.wikidot.com/hardware</a></p>
+<img alt="http://vusb.wikidot.com/local--files/hardware/level-conversion-with-zener.gif" src="http://vusb.wikidot.com/local--files/hardware/level-conversion-with-zener.gif" />
+<p>&#8220;Solution B: Level conversion on D+ and D-
+Level conversion with Zener diodes.</p>
+<p>Instead of reducing the AVR&#8217;s power supply,
+we can limit the output voltage on D+ and D- with Zener diodes.
+We recommend 3.6 V low power types, those that look like 1N4148
+(usually 500 mW or less).
+Low power types are required because they have less capacitance
+and thus cause less distortion on the data lines.
+And 3.6 V is better than 3.3 V because 3.3 V diodes yield only ca. 2.7 V
+in conjunction with an 1.5 kΩ (or more exactly 10 kΩ) pull-up resistor.
+With 3.3 V diodes, the device may not be detected reliably.</p>
+<p>If you use Zener diodes for level conversion,
+please measure the voltage levels to make sure that the diodes you have chosen
+match the requirements.</p>
+<p>Advantages of the Zener diode approach:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Low cost.</li>
+<li>Easy to obtain.</li>
+<li>Entire design can be at 5 V.</li>
+<li>AVR can be clocked at high rates.</li>
+</ul>
+</div></blockquote>
+<p>Disadvantages:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Not a clean solution, a compromise between all parameters must be found.</li>
+<li>Zener diodes come with a broad range of characteristics, especially at low currents, results may not be reproducible.</li>
+<li>High currents when sending high-level.</li>
+<li>High level is different for signaling and in idle state because signaling uses high currents to drive the diodes while idle state is driven by a 1.5 kΩ pull-up resistor.&#8221;</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="makefile">
+<h2>11.2. Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h2>
+<p>Tested with atmega88. Makefile settings:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">TARGET</span><span class="o">=</span><span class="n">atmega88</span>
+<span class="n">HFUSE</span><span class="o">=</span><span class="mh">0xdd</span>
+<span class="n">LFUSE</span><span class="o">=</span><span class="mh">0xef</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-on-ubuntu">
+<h2>11.3. Test on Ubuntu<a class="headerlink" href="#test-on-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>checking:</p>
+<div class="highlight-python"><pre>$ lsusb |grep -i 16c0:05dc
+Bus 003 Device 006: ID 16c0:05dc VOTI shared ID for use with libusb
+
+$ ls -l /dev/bus/usb/003/006
+crw-rw-r-- 1 root root 189, 261 2011-11-05 10:31 /dev/bus/usb/003/006
+
+$ avrdude -patmega88 -cusbasp
+avrdude: Warning: cannot query manufacturer for device: error sending control message: Operation not permitted
+avrdude: error: could not find USB device "USBasp" with vid=0x16c0 pid=0x5dc</pre>
+</div>
+<p>The permission should be changed:</p>
+<div class="highlight-python"><pre>$sudo nano /etc/udev/rules.d/60-objdev.rules</pre>
+</div>
+<p>add this line:</p>
+<div class="highlight-python"><pre>ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="05dc", GROUP="users", MODE="0666"</pre>
+</div>
+<p>update rules:</p>
+<div class="highlight-python"><pre>$sudo udevadm trigger</pre>
+</div>
+<p>checking again:</p>
+<div class="highlight-python"><pre>$ ls -l /dev/bus/usb/003/006
+crw-rw-rw- 1 root users 189, 261 2011-11-05 10:33 /dev/bus/usb/003/006
+
+$ avrdude -patmega88 -cusbasp
+avrdude: error: programm enable: target doesn't answer. 1
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+avrdude done.  Thank you.</pre>
+</div>
+<p>Permission is OK now.</p>
+<p>Testing with connected controller:</p>
+<div class="highlight-python"><pre>$ avrdude -patmega88 -cusbasp
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e930a
+
+avrdude: safemode: Fuses OK
+
+avrdude done.  Thank you.</pre>
+</div>
+</div>
+<div class="section" id="schematic">
+<h2>11.4. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/usbasp_sch_28.png" src="../../_images/usbasp_sch_28.png" />
+</div></blockquote>
+</div>
+<div class="section" id="board">
+<h2>11.5. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<p>Normal, bottom mirrored, wires only:</p>
+<blockquote>
+<div><img alt="../../_images/usbasp_brd_29.png" src="../../_images/usbasp_brd_29.png" />
+<img alt="../../_images/usbasp_brd_30.png" src="../../_images/usbasp_brd_30.png" />
+<img alt="../../_images/usbasp_brd_31.png" src="../../_images/usbasp_brd_31.png" />
+</div></blockquote>
+</div>
+<div class="section" id="partlist">
+<h2>11.6. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<caption></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">part</th>
+<th class="head">value</th>
+<th class="head">position</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C1</td>
+<td>4u7</td>
+<td>(2.4 0.8)</td>
+</tr>
+<tr class="row-odd"><td>C3</td>
+<td>100n</td>
+<td>(1.7 0.85)</td>
+</tr>
+<tr class="row-even"><td>C4</td>
+<td>22p</td>
+<td>(1.5 0.75)</td>
+</tr>
+<tr class="row-odd"><td>C5</td>
+<td>22p</td>
+<td>(1.6 0.7)</td>
+</tr>
+<tr class="row-even"><td>D1</td>
+<td>3V6</td>
+<td>(1.1 0.95)</td>
+</tr>
+<tr class="row-odd"><td>D2</td>
+<td>3V6</td>
+<td>(1.2 0.9)</td>
+</tr>
+<tr class="row-even"><td>IC1</td>
+<td>&nbsp;</td>
+<td>(1.95 0.85)</td>
+</tr>
+<tr class="row-odd"><td>JP1</td>
+<td>Supply target</td>
+<td>(3 1.55)</td>
+</tr>
+<tr class="row-even"><td>JP2</td>
+<td>Self programming</td>
+<td>(2.6 0.25)</td>
+</tr>
+<tr class="row-odd"><td>JP3</td>
+<td>Slow SCK</td>
+<td>(2.4 1.25)</td>
+</tr>
+<tr class="row-even"><td>JP4</td>
+<td>Reset</td>
+<td>(3.1 0.15)</td>
+</tr>
+<tr class="row-odd"><td>JP5</td>
+<td>Connect</td>
+<td>(2.7 1.65)</td>
+</tr>
+<tr class="row-even"><td>LED1</td>
+<td>green</td>
+<td>(3 1.15)</td>
+</tr>
+<tr class="row-odd"><td>LED2</td>
+<td>red</td>
+<td>(3 0.95)</td>
+</tr>
+<tr class="row-even"><td>LED3</td>
+<td>POW TARG</td>
+<td>(3.3 1.35)</td>
+</tr>
+<tr class="row-odd"><td>LED4</td>
+<td>POW USB</td>
+<td>(2.7 1.35)</td>
+</tr>
+<tr class="row-even"><td>Q1</td>
+<td>12MHz</td>
+<td>(1.3 0.65)</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>68</td>
+<td>(1 0.6)</td>
+</tr>
+<tr class="row-even"><td>R2</td>
+<td>68</td>
+<td>(1.2 1.15)</td>
+</tr>
+<tr class="row-odd"><td>R3</td>
+<td>2k2</td>
+<td>(1.3 1.35)</td>
+</tr>
+<tr class="row-even"><td>R4</td>
+<td>1k</td>
+<td>(2.7 0.8)</td>
+</tr>
+<tr class="row-odd"><td>R5</td>
+<td>1k</td>
+<td>(2.6 0.95)</td>
+</tr>
+<tr class="row-even"><td>R6</td>
+<td>10k</td>
+<td>(1.6 1.2)</td>
+</tr>
+<tr class="row-odd"><td>R7</td>
+<td>1k</td>
+<td>(3.5 1.45)</td>
+</tr>
+<tr class="row-even"><td>R8</td>
+<td>1k</td>
+<td>(2.5 1.5)</td>
+</tr>
+<tr class="row-odd"><td>X1</td>
+<td>&nbsp;</td>
+<td>(0.7 0.95)</td>
+</tr>
+<tr class="row-even"><td>X2</td>
+<td>&nbsp;</td>
+<td>(3.45 0.7)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="d-view">
+<h2>11.7. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="front">
+<h3>11.7.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/usbasp_brd_3d_32.png" src="../../_images/usbasp_brd_3d_32.png" />
+</div></blockquote>
+</div>
+<div class="section" id="right-side">
+<h3>11.7.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/usbasp_brd_3d_33.png" src="../../_images/usbasp_brd_3d_33.png" />
+</div></blockquote>
+</div>
+<div class="section" id="left-side">
+<h3>11.7.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/usbasp_brd_3d_34.png" src="../../_images/usbasp_brd_3d_34.png" />
+</div></blockquote>
+</div>
+<div class="section" id="bottom">
+<h3>11.7.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/usbasp_brd_3d_35.png" src="../../_images/usbasp_brd_3d_35.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="reset">
+<h2>11.8. Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<p>To reset on Ubuntu:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">usb.core</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">fcntl</span>
+
+<span class="n">ID_VENDOR</span> <span class="o">=</span> <span class="mh">0x16c0</span>
+<span class="n">ID_PRODUCT</span> <span class="o">=</span> <span class="mh">0x05dc</span>     
+<span class="n">USBDEVFS_RESET</span> <span class="o">=</span> <span class="mi">21780</span>
+
+<span class="k">def</span> <span class="nf">find</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;searching for device (</span><span class="si">%x</span><span class="s">:</span><span class="si">%x</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ID_VENDOR</span><span class="p">,</span> <span class="n">ID_PRODUCT</span><span class="p">))</span>
+    <span class="n">dev</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">idVendor</span><span class="o">=</span><span class="n">ID_VENDOR</span><span class="p">,</span>
+                        <span class="n">idProduct</span><span class="o">=</span><span class="n">ID_PRODUCT</span><span class="p">,</span>
+                        <span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">dev</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;device not found&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dev</span>
+
+<span class="k">def</span> <span class="nf">usbstr</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">s</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">s</span><span class="o">=</span><span class="s">&#39;000&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span><span class="o">+</span><span class="n">s</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="k">def</span> <span class="nf">usbfs_filename</span><span class="p">(</span><span class="n">dev</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39;/dev/bus/usb/</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">usbstr</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">bus</span><span class="p">),</span> <span class="n">usbstr</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">address</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">reset1</span><span class="p">(</span><span class="n">dev</span><span class="p">):</span>
+    <span class="n">fname</span><span class="o">=</span><span class="n">usbfs_filename</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Resetting USB device </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">fname</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
+        <span class="n">rc</span> <span class="o">=</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">ioctl</span> <span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">USBDEVFS_RESET</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;Error in ioctl&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">reset2</span><span class="p">(</span><span class="n">dev</span><span class="p">):</span>
+    <span class="n">dev</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c"># not working</span>
+    
+<span class="n">dev</span><span class="o">=</span><span class="n">find</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">dev</span><span class="p">:</span>
+    <span class="n">reset1</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="section" id="sources">
+<h2>11.9. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.fischl.de/usbasp/">original design</a></p>
+<blockquote>
+<div><img alt="http://www.fischl.de/usbasp/bilder/usbasp_circuit.png" src="http://www.fischl.de/usbasp/bilder/usbasp_circuit.png" />
+</div></blockquote>
+<p><a class="reference external" href="http://image.pinout.net/pinout_10_pin_files/connector_pinout.php?image=avr_icsp.png">ISP pinout</a></p>
+<blockquote>
+<div><img alt="http://image.pinout.net/pinout_10_pin_files/avr_icsp.png" src="http://image.pinout.net/pinout_10_pin_files/avr_icsp.png" />
+</div></blockquote>
+<dl class="docutils">
+<dt>similar projects:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://lategahn.2log.de/index.php?USBASP-Stripboard-layout">http://lategahn.2log.de/index.php?USBASP-Stripboard-layout</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">11. USBasp AVR programmer</a><ul>
+<li><a class="reference internal" href="#v-usb-hardware-recommendation">11.1. V-USB hardware recommendation</a></li>
+<li><a class="reference internal" href="#makefile">11.2. Makefile</a></li>
+<li><a class="reference internal" href="#test-on-ubuntu">11.3. Test on Ubuntu</a></li>
+<li><a class="reference internal" href="#schematic">11.4. Schematic</a></li>
+<li><a class="reference internal" href="#board">11.5. Board</a></li>
+<li><a class="reference internal" href="#partlist">11.6. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">11.7. 3D view</a><ul>
+<li><a class="reference internal" href="#front">11.7.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">11.7.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">11.7.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">11.7.4. Bottom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reset">11.8. Reset</a></li>
+<li><a class="reference internal" href="#sources">11.9. Sources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../stk200/stk200.html"
+                        title="previous chapter">10. STK200 AVR programmer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../usbled/usbled.html"
+                        title="next chapter">12. USB LED</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/projects/usbasp/usbasp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../usbled/usbled.html" title="12. USB LED"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../stk200/stk200.html" title="10. STK200 AVR programmer"
+             >previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>
