@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>11. USBasp AVR programmer &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    <title>12. USBasp AVR programmer &mdash; MyElectronicProjects 0.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
-    <link rel="next" title="12. USB LED" href="../usbled/usbled.html" />
-    <link rel="prev" title="10. STK200 AVR programmer" href="../stk200/stk200.html" /> 
+    <link rel="next" title="13. USB LED" href="../usbled/usbled.html" />
+    <link rel="prev" title="11. STK200 AVR programmer" href="../stk200/stk200.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../usbled/usbled.html" title="12. USB LED"
+          <a href="../usbled/usbled.html" title="13. USB LED"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../stk200/stk200.html" title="10. STK200 AVR programmer"
+          <a href="../stk200/stk200.html" title="11. STK200 AVR programmer"
              accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
       </ul>
@@ -52,13 +52,13 @@
           <div class="body">
             
   <div class="section" id="usbasp-avr-programmer">
-<h1>11. USBasp AVR programmer<a class="headerlink" href="#usbasp-avr-programmer" title="Permalink to this headline">¶</a></h1>
+<h1>12. USBasp AVR programmer<a class="headerlink" href="#usbasp-avr-programmer" title="Permalink to this headline">¶</a></h1>
 <p>Status: OK</p>
 <p>It is used for programming AVR controller and Arduino compatible boards using the USB port.</p>
 <p>firmware, design: <a class="reference external" href="http://www.fischl.de/usbasp/">http://www.fischl.de/usbasp/</a></p>
 <p>USBasp is based on V-USB (<a class="reference external" href="http://www.obdev.at/products/vusb/index.html">http://www.obdev.at/products/vusb/index.html</a>)</p>
 <div class="section" id="v-usb-hardware-recommendation">
-<h2>11.1. V-USB hardware recommendation<a class="headerlink" href="#v-usb-hardware-recommendation" title="Permalink to this headline">¶</a></h2>
+<h2>12.1. V-USB hardware recommendation<a class="headerlink" href="#v-usb-hardware-recommendation" title="Permalink to this headline">¶</a></h2>
 <p>only difference to USBasp: 1.5 kΩ pull-up resistor</p>
 <p><a class="reference external" href="http://vusb.wikidot.com/hardware">http://vusb.wikidot.com/hardware</a></p>
 <img alt="http://vusb.wikidot.com/local--files/hardware/level-conversion-with-zener.gif" src="http://vusb.wikidot.com/local--files/hardware/level-conversion-with-zener.gif" />
@@ -96,7 +96,7 @@ match the requirements.</p>
 </div></blockquote>
 </div>
 <div class="section" id="makefile">
-<h2>11.2. Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h2>
+<h2>12.2. Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h2>
 <p>Tested with atmega88. Makefile settings:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">TARGET</span><span class="o">=</span><span class="n">atmega88</span>
 <span class="n">HFUSE</span><span class="o">=</span><span class="mh">0xdd</span>
@@ -105,7 +105,7 @@ match the requirements.</p>
 </div>
 </div>
 <div class="section" id="test-on-ubuntu">
-<h2>11.3. Test on Ubuntu<a class="headerlink" href="#test-on-ubuntu" title="Permalink to this headline">¶</a></h2>
+<h2>12.3. Test on Ubuntu<a class="headerlink" href="#test-on-ubuntu" title="Permalink to this headline">¶</a></h2>
 <p>checking:</p>
 <div class="highlight-python"><pre>$ lsusb |grep -i 16c0:05dc
 Bus 003 Device 006: ID 16c0:05dc VOTI shared ID for use with libusb
@@ -153,22 +153,22 @@ avrdude done.  Thank you.</pre>
 </div>
 </div>
 <div class="section" id="schematic">
-<h2>11.4. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<h2>12.4. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><img alt="../../_images/usbasp_sch_28.png" src="../../_images/usbasp_sch_28.png" />
+<div><img alt="../../_images/usbasp_sch_36.png" src="../../_images/usbasp_sch_36.png" />
 </div></blockquote>
 </div>
 <div class="section" id="board">
-<h2>11.5. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<h2>12.5. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
 <p>Normal, bottom mirrored, wires only:</p>
 <blockquote>
-<div><img alt="../../_images/usbasp_brd_29.png" src="../../_images/usbasp_brd_29.png" />
-<img alt="../../_images/usbasp_brd_30.png" src="../../_images/usbasp_brd_30.png" />
-<img alt="../../_images/usbasp_brd_31.png" src="../../_images/usbasp_brd_31.png" />
+<div><img alt="../../_images/usbasp_brd_37.png" src="../../_images/usbasp_brd_37.png" />
+<img alt="../../_images/usbasp_brd_38.png" src="../../_images/usbasp_brd_38.png" />
+<img alt="../../_images/usbasp_brd_39.png" src="../../_images/usbasp_brd_39.png" />
 </div></blockquote>
 </div>
 <div class="section" id="partlist">
-<h2>11.6. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<h2>12.6. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><table border="1" class="docutils">
 <caption></caption>
@@ -297,34 +297,34 @@ avrdude done.  Thank you.</pre>
 </div></blockquote>
 </div>
 <div class="section" id="d-view">
-<h2>11.7. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<h2>12.7. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="front">
-<h3>11.7.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<h3>12.7.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><img alt="../../_images/usbasp_brd_3d_32.png" src="../../_images/usbasp_brd_3d_32.png" />
+<div><img alt="../../_images/usbasp_brd_3d_40.png" src="../../_images/usbasp_brd_3d_40.png" />
 </div></blockquote>
 </div>
 <div class="section" id="right-side">
-<h3>11.7.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<h3>12.7.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><img alt="../../_images/usbasp_brd_3d_33.png" src="../../_images/usbasp_brd_3d_33.png" />
+<div><img alt="../../_images/usbasp_brd_3d_41.png" src="../../_images/usbasp_brd_3d_41.png" />
 </div></blockquote>
 </div>
 <div class="section" id="left-side">
-<h3>11.7.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<h3>12.7.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><img alt="../../_images/usbasp_brd_3d_34.png" src="../../_images/usbasp_brd_3d_34.png" />
+<div><img alt="../../_images/usbasp_brd_3d_42.png" src="../../_images/usbasp_brd_3d_42.png" />
 </div></blockquote>
 </div>
 <div class="section" id="bottom">
-<h3>11.7.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<h3>12.7.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><img alt="../../_images/usbasp_brd_3d_35.png" src="../../_images/usbasp_brd_3d_35.png" />
+<div><img alt="../../_images/usbasp_brd_3d_43.png" src="../../_images/usbasp_brd_3d_43.png" />
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="reset">
-<h2>11.8. Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<h2>12.8. Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
 <p>To reset on Ubuntu:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">logging</span>
@@ -372,7 +372,7 @@ avrdude done.  Thank you.</pre>
 </div>
 </div>
 <div class="section" id="sources">
-<h2>11.9. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<h2>12.9. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.fischl.de/usbasp/">original design</a></p>
 <blockquote>
 <div><img alt="http://www.fischl.de/usbasp/bilder/usbasp_circuit.png" src="http://www.fischl.de/usbasp/bilder/usbasp_circuit.png" />
@@ -399,32 +399,32 @@ avrdude done.  Thank you.</pre>
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">11. USBasp AVR programmer</a><ul>
-<li><a class="reference internal" href="#v-usb-hardware-recommendation">11.1. V-USB hardware recommendation</a></li>
-<li><a class="reference internal" href="#makefile">11.2. Makefile</a></li>
-<li><a class="reference internal" href="#test-on-ubuntu">11.3. Test on Ubuntu</a></li>
-<li><a class="reference internal" href="#schematic">11.4. Schematic</a></li>
-<li><a class="reference internal" href="#board">11.5. Board</a></li>
-<li><a class="reference internal" href="#partlist">11.6. Partlist</a></li>
-<li><a class="reference internal" href="#d-view">11.7. 3D view</a><ul>
-<li><a class="reference internal" href="#front">11.7.1. Front</a></li>
-<li><a class="reference internal" href="#right-side">11.7.2. Right side</a></li>
-<li><a class="reference internal" href="#left-side">11.7.3. Left side</a></li>
-<li><a class="reference internal" href="#bottom">11.7.4. Bottom</a></li>
+<li><a class="reference internal" href="#">12. USBasp AVR programmer</a><ul>
+<li><a class="reference internal" href="#v-usb-hardware-recommendation">12.1. V-USB hardware recommendation</a></li>
+<li><a class="reference internal" href="#makefile">12.2. Makefile</a></li>
+<li><a class="reference internal" href="#test-on-ubuntu">12.3. Test on Ubuntu</a></li>
+<li><a class="reference internal" href="#schematic">12.4. Schematic</a></li>
+<li><a class="reference internal" href="#board">12.5. Board</a></li>
+<li><a class="reference internal" href="#partlist">12.6. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">12.7. 3D view</a><ul>
+<li><a class="reference internal" href="#front">12.7.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">12.7.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">12.7.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">12.7.4. Bottom</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reset">11.8. Reset</a></li>
-<li><a class="reference internal" href="#sources">11.9. Sources</a></li>
+<li><a class="reference internal" href="#reset">12.8. Reset</a></li>
+<li><a class="reference internal" href="#sources">12.9. Sources</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../stk200/stk200.html"
-                        title="previous chapter">10. STK200 AVR programmer</a></p>
+                        title="previous chapter">11. STK200 AVR programmer</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../usbled/usbled.html"
-                        title="next chapter">12. USB LED</a></p>
+                        title="next chapter">13. USB LED</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/projects/usbasp/usbasp.txt"
@@ -454,10 +454,10 @@ avrdude done.  Thank you.</pre>
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../usbled/usbled.html" title="12. USB LED"
+          <a href="../usbled/usbled.html" title="13. USB LED"
              >next</a> |</li>
         <li class="right" >
-          <a href="../stk200/stk200.html" title="10. STK200 AVR programmer"
+          <a href="../stk200/stk200.html" title="11. STK200 AVR programmer"
              >previous</a> |</li>
         <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
       </ul>
