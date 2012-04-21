@@ -20,6 +20,10 @@ Schematic
       .. eagle-image:: audio_amplifier.sch
                 :resolution: 150
 
+.. raw:: latex
+
+  \newpage % hard pagebreak at exactly this position 
+
 Board
 ----------
 

@@ -24,6 +24,10 @@ Schematic
       .. eagle-image:: parallelmonitor.sch
                 :resolution: 150
 
+.. raw:: latex
+
+  \newpage % hard pagebreak at exactly this position 
+
 Board
 ----------
 
