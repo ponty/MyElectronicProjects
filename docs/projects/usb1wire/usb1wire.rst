@@ -4,8 +4,10 @@ usb1wire
 
 Status: OK
 
-Low speed USB device which can handle multiple 1wire buses.
+Low speed USB device which can handle multiple 1wire_ buses.
 Example program: onewire_demo.py under softusbduino_
+
+Based on V-USB_ hardware.
 
 connections: 
 
@@ -105,4 +107,6 @@ Bottom
 
 
 .. _softusbduino: https://github.com/ponty/softusbduino
+.. _V-USB: http://www.obdev.at/products/vusb/index.html
+.. _1wire: http://en.wikipedia.org/wiki/1-Wire
       
