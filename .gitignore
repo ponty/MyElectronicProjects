@@ -35,3 +35,4 @@ sloccount.sc
 *.b#*
 *.o
 *.hex
+*~
