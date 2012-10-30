@@ -17,6 +17,9 @@ function   AVR pin  Arduino pin
 1wire     PC0       A0      
 1wire     PC1       A1
 1wire     PC2       A2
+1wire     PD5       D5
+1wire     PD6       D6
+1wire     PD7       D7
 USB D-    PD0       D0          
 USB D+    PD2       D2
 ========= ========= ===========
