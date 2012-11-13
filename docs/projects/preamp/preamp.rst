@@ -86,6 +86,6 @@ Sources
 
 original design
 
-      .. image:: preamp00.gif
+      .. image:: preamp00.png
 
        
