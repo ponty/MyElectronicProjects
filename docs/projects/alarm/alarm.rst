@@ -2,7 +2,7 @@
 alarm
 =========
 
-Status: ?
+Status: OK
 
 Pins
 -----
@@ -12,6 +12,8 @@ board pin  AVR pin  Arduino pin
 ========= ========= ===========
 in         PC3       A3      
 speaker    PB1       D9
+debug in   PC0       A0      
+debug LED  PC5       A5
 ========= ========= =========== 
 
 
@@ -90,3 +92,7 @@ Bottom
 
 ..  [[[end]]]
 
+Sources
+--------
+
+Based on this design: http://www.edn.com/article/511304-Detect_live_ac_mains_lines.php
