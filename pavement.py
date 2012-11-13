@@ -34,11 +34,15 @@ options.paved.clean.patterns += ['*.pickle',
                                  'nosetests.xml',
                                  'sloccount.sc',
                                  '*.pdf', '*.tex',
-                                 '*.png',
-                                 '*.b#*', '*.s#*','*.pro', # eagle
+                                 '*_sch_*.png',
+                                 '*_brd_*.png',
+                                 '*.b#*', '*.s#*', # eagle
+                                 #'*.pro', 
                                  '*.hex',
                                  '*.zip',   
                                  'distribute_setup.py',
+                                 '*.bak',
+                                 '$savepcb.brd',
                                  ]
 
 options.paved.dist.manifest.include.remove('distribute_setup.py')
