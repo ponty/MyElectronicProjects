@@ -12,6 +12,6 @@ Sources
 
 original design
 
-      .. image:: m22.gif
+      .. image:: m22.png
 
 
