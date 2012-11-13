@@ -1,0 +1,112 @@
+# EESchema Netlist Version 1.1 created  Thu 24 Mar 2011 03:54:30 PM CET
+(
+ ( /4D8B5991 $noname$ BT1 5-9V
+  ( 1 N-000007 )
+  ( 2 GND )
+ )
+ ( /4D1C41B5 C1 C1 100n
+  ( 1 N-000002 )
+  ( 2 N-000001 )
+ )
+ ( /4D8B5973 D3 D1 1N4148
+  ( 1 N-000013 )
+  ( 2 N-000004 )
+ )
+ ( /4D8B5978 D3 D2 1N4148
+  ( 1 N-000005 )
+  ( 2 N-000004 )
+ )
+ ( /4D7A33B7 SIL-3 K1 IN
+  ( 1 N-000003 )
+  ( 2 GND )
+  ( 3 N-000004 )
+ )
+ ( /4D7A341B 1pin P1 AC_IN
+  ( 1 /HOT )
+ )
+ ( /4D7A341E 1pin P2 AC_OUT
+  ( 1 N-000001 )
+ )
+ ( /4D8B5AC5 $noname$ P3 IN
+  ( 1 N-000006 )
+ )
+ ( /4D8B5A7B 1pin P4 IN
+  ( 1 N-000013 )
+ )
+ ( /4D8B59EB 1pin P5 IN
+  ( 1 N-000005 )
+ )
+ ( /4C1148E2 C2 R2 470
+  ( 1 N-000003 )
+  ( 2 N-000004 )
+ )
+ ( /4C114765 R3 R3 330
+  ( 1 N-000011 )
+  ( 2 N-000001 )
+ )
+ ( /4C11475E R3 R4 330
+  ( 1 /HOT )
+  ( 2 N-000009 )
+ )
+ ( /4D1C41AC R3 R5 39
+  ( 1 /HOT )
+  ( 2 N-000002 )
+ )
+ ( /4D8B59B1 $noname$ SW1 SW_PUSH
+  ( 1 N-000007 )
+  ( 2 N-000006 )
+ )
+ ( /4C1147FD DIP-6__300 U1 MOC3063
+  ( 1 N-000003 )
+  ( 2 GND )
+  ( 4 N-000011 )
+  ( 5 ? )
+  ( 6 N-000009 )
+ )
+ ( /4CADBED5 U2 U2 BT137-800
+  ( 1 N-000001 )
+  ( 2 /HOT )
+  ( 3 N-000011 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}

@@ -1,0 +1,64 @@
+EESchema-DOCLIB  Version 2.0  Mon 11 Oct 2010 02:50:14 PM CEST
+#
+$CMP 74LS241
+D 8 bits Bus Buffer 3 State out
+K TTL Buffer BUS 3State
+$ENDCMP
+#
+$CMP 7805
+D Linear Regulator +5V
+K POWER REGUL
+F regulator/lm78*.*
+$ENDCMP
+#
+$CMP BC237
+F transistors/bipolar/bc237.pdf
+$ENDCMP
+#
+$CMP BC307
+F transistors/bipolar/bc307.pdf
+$ENDCMP
+#
+$CMP C
+D Condensateur non polarise
+$ENDCMP
+#
+$CMP CONN_3
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP CONN_6
+D ymbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP CP1
+D Condensateur polarise
+$ENDCMP
+#
+$CMP DB25
+K CONN
+$ENDCMP
+#
+$CMP DIODE
+D Diode simple
+K DEV DIODE
+$ENDCMP
+#
+$CMP LED
+K LED
+$ENDCMP
+#
+$CMP LM317
+D Linear Regulator (adjustable)
+K POWER REGUL
+F regulator/lm117.pdf
+$ENDCMP
+#
+$CMP R
+D Resistance
+K R DEV
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,297 @@
+# EESchema Netlist Version 1.1 created  7/6/2010-20:40:48
+(
+ ( /4C0D2D74 C1 C1 470u_25V
+  ( 1 N-000021 )
+  ( 2 GND )
+ )
+ ( /4C0D2D7C C1 C2 470u_25V
+  ( 1 N-000036 )
+  ( 2 GND )
+ )
+ ( /4C0D2D6A C1 C3 10n
+  ( 1 N-000021 )
+  ( 2 GND )
+ )
+ ( /4C0D2D79 C1 C4 10n
+  ( 1 N-000036 )
+  ( 2 GND )
+ )
+ ( /4C0D2CDC C1 C5 10n
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4C0D2CF1 C1 C6 10n
+  ( 1 -5V )
+  ( 2 GND )
+ )
+ ( /4C0D4972 C1 C7 C
+  ( 1 N-000024 )
+  ( 2 -5V )
+ )
+ ( /4C0D4976 C1 C8 C
+  ( 1 N-000012 )
+  ( 2 -5V )
+ )
+ ( /4C0D4980 C1 C9 C
+  ( 1 N-000013 )
+  ( 2 -5V )
+ )
+ ( /4C0D2E0B $noname$ D1 BRIDGE
+  ( 1 N-000036 )
+  ( 2 N-000022 )
+  ( 3 N-000021 )
+  ( 4 N-000015 )
+ )
+ ( /4C0D32AC POWER-IN-JACK-PMS J1 JACK-PMS
+  ( 1 GND )
+  ( 2 ? )
+  ( 3 N-000015 )
+ )
+ ( /4C0D327E POWER-IN-JACK-PMS J2 JACK-PMS
+  ( 1 N-000022 )
+  ( 2 ? )
+  ( 3 GND )
+ )
+ ( /4C0D5155 SIL-2 P1 OUT
+  ( 1 N-000031 )
+  ( 2 GND )
+ )
+ ( /4C081A7E R4 R1 10k
+  ( 1 N-000016 )
+  ( 2 -5V )
+ )
+ ( /4C081A85 R4 R2 10k
+  ( 1 +5V )
+  ( 2 N-000018 )
+ )
+ ( /4C0D48B2 R4 R3 20k
+  ( 1 N-000023 )
+  ( 2 -5V )
+ )
+ ( /4C0D4A91 R4 R4 4k7
+  ( 1 N-000010 )
+  ( 2 N-000026 )
+ )
+ ( /4C0D4AA3 R4 R5 4k7
+  ( 1 N-000027 )
+  ( 2 N-000009 )
+ )
+ ( /4C0D4AAD R4 R6 4k7
+  ( 1 N-000008 )
+  ( 2 +5V )
+ )
+ ( /4C0D4AB2 R4 R7 4k7
+  ( 1 N-000028 )
+  ( 2 +5V )
+ )
+ ( /4C0D4ECB R4 R8 4k7
+  ( 1 +5V )
+  ( 2 N-000004 )
+ )
+ ( /4C0D4EF8 R4 R9 50k
+  ( 1 N-000029 )
+  ( 2 N-000006 )
+ )
+ ( /4C0D4EDF R4 R10 400k
+  ( 1 N-000030 )
+  ( 2 N-000004 )
+ )
+ ( /4C0D50B3 R4 R11 10k
+  ( 1 N-000002 )
+  ( 2 GND )
+ )
+ ( /4C0D50BE R4 R12 47k
+  ( 1 N-000031 )
+  ( 2 N-000002 )
+ )
+ ( /4C081AB0 3M-N7E50 RV1 100k
+  ( 1 N-000016 )
+  ( 2 N-000017 )
+  ( 3 +5V )
+ )
+ ( /4C081AC4 SM1206 RV2 100k
+  ( 1 -5V )
+  ( 2 N-000020 )
+  ( 3 N-000018 )
+ )
+ ( /4C0D4ACA SM1206 RV3 1k
+  ( 1 N-000009 )
+  ( 2 +5V )
+  ( 3 N-000026 )
+ )
+ ( /4C0D4878 $noname$ RV4 10k_LOG
+  ( 1 +5V )
+  ( 2 N-000014 )
+  ( 3 N-000023 )
+ )
+ ( /4C0D50DC SM1206 RV5 100k
+  ( 1 N-000033 )
+  ( 2 N-000032 )
+  ( 3 GND )
+ )
+ ( /4C0D4A6F $noname$ SW1 DUTY_LOCK1
+  ( 1 N-000027 )
+  ( 2 N-000025 )
+  ( 3 N-000010 )
+ )
+ ( /4C0D4A3F $noname$ SW2 DUTY_LOCK2
+  ( 1 N-000028 )
+  ( 2 N-000011 )
+  ( 3 N-000008 )
+ )
+ ( /4C0D493E $noname$ SW3 RANGE
+  ( 1 N-000012 )
+  ( 2 N-000013 )
+  ( 3 N-000024 )
+ )
+ ( /4C0D4E7E $noname$ SW4 SWITCH_INV
+  ( 1 N-000029 )
+  ( 2 N-000005 )
+  ( 3 N-000007 )
+ )
+ ( /4C0D4EBD $noname$ SW5 SWITCH_INV
+  ( 1 N-000030 )
+  ( 2 N-000033 )
+  ( 3 N-000005 )
+ )
+ ( /4C0D2CA8 TO220_VERT U1 7805
+  ( GND GND )
+  ( VI N-000021 )
+  ( VO +5V )
+ )
+ ( /4C0D2CC0 TO220_VERT U2 7905
+  ( GND GND )
+  ( VI N-000036 )
+  ( VO -5V )
+ )
+ ( /4C081A4A 14DIP-ELL300 U3 ICL8038
+  ( 1 N-000017 )
+  ( 2 N-000007 )
+  ( 3 N-000006 )
+  ( 4 N-000011 )
+  ( 5 N-000025 )
+  ( 6 +5V )
+  ( 7 N-000014 )
+  ( 8 N-000014 )
+  ( 9 N-000004 )
+  ( 10 N-000013 )
+  ( 11 -5V )
+  ( 12 N-000020 )
+ )
+ ( /4C0D5073 8DIP-ELL300 U4 TL071
+  ( 2 N-000002 )
+  ( 3 N-000032 )
+  ( 4 -5V )
+  ( 6 N-000031 )
+  ( 7 +5V )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+$endlist
+$endfootprintlist
+}

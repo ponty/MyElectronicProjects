@@ -1,0 +1,215 @@
+# EESchema Netlist Version 1.1 created  Tue 29 Mar 2011 09:38:41 AM CEST
+(
+ ( /4D90FDEA $noname  JP8 JUMPER {Lib=JUMPER}
+  (    1 /D7 )
+  (    2 /B3 )
+ )
+ ( /4D90FDE9 $noname  JP9 JUMPER {Lib=JUMPER}
+  (    1 /D7 )
+  (    2 /C5 )
+ )
+ ( /4D90FDE7 $noname  JP7 JUMPER {Lib=JUMPER}
+  (    1 /D6 )
+  (    2 /C3 )
+ )
+ ( /4D90FDE6 $noname  JP6 JUMPER {Lib=JUMPER}
+  (    1 /D6 )
+  (    2 /B2 )
+ )
+ ( /4D90FDE2 $noname  JP4 JUMPER {Lib=JUMPER}
+  (    1 /D5 )
+  (    2 /B1 )
+ )
+ ( /4D90FDE1 $noname  JP5 JUMPER {Lib=JUMPER}
+  (    1 /D5 )
+  (    2 /C6 )
+ )
+ ( /4D90FDDB $noname  JP3 JUMPER {Lib=JUMPER}
+  (    1 /D4 )
+  (    2 /C7 )
+ )
+ ( /4D90FDD7 $noname  JP2 JUMPER {Lib=JUMPER}
+  (    1 /D4 )
+  (    2 /B0 )
+ )
+ ( /4D90F30B $noname  D1 LED {Lib=LED}
+  (    1 +5V )
+  (    2 N-000034 )
+ )
+ ( /4D90EDB4 $noname  SW5 SWITCH_INV {Lib=SWITCH_INV}
+  (    1 ? )
+  (    2 GND )
+  (    3 N-000034 )
+ )
+ ( /4D90EC3E $noname  P2 A_UP {Lib=CONN_12}
+  (    1 ? )
+  (    2 ? )
+  (    3 ? )
+  (    4 /C3 )
+  (    5 ? )
+  (    6 /C5 )
+  (    7 /C6 )
+  (    8 /C7 )
+  (    9 +5V )
+  (   10 GND )
+  (   11 ? )
+  (   12 ? )
+ )
+ ( /4D90EA93 $noname  S2 NEW {Lib=DISPLAY_BL}
+  (    A ? )
+  (    K ? )
+  (    1 GND )
+  (    2 +5V )
+  (    3 /CONTRAST )
+  (    4 /RS )
+  (    5 GND )
+  (    6 /EN )
+  (    7 ? )
+  (    8 ? )
+  (    9 ? )
+  (   10 ? )
+  (   11 /D4 )
+  (   12 /D5 )
+  (   13 /D6 )
+  (   14 /D7 )
+ )
+ ( /4D90E8D7 $noname  RV1 10k-20k {Lib=POT}
+  (    1 +5V )
+  (    2 /CONTRAST )
+  (    3 GND )
+ )
+ ( /4D90E789 $noname  S1 OLD {Lib=DISPLAY_BL}
+  (    A ? )
+  (    K ? )
+  (    1 GND )
+  (    2 +5V )
+  (    3 /CONTRAST )
+  (    4 /RS )
+  (    5 GND )
+  (    6 /EN )
+  (    7 ? )
+  (    8 ? )
+  (    9 ? )
+  (   10 ? )
+  (   11 /D4 )
+  (   12 /D5 )
+  (   13 /D6 )
+  (   14 /D7 )
+ )
+ ( /4D135F76 $noname  P1 A_UP {Lib=CONN_12}
+  (    1 /B0 )
+  (    2 /B1 )
+  (    3 /B2 )
+  (    4 /B3 )
+  (    5 ? )
+  (    6 ? )
+  (    7 /RS )
+  (    8 /EN )
+  (    9 +5V )
+  (   10 GND )
+  (   11 ? )
+  (   12 ? )
+ )
+ ( /4D1212DF $noname  C2 100n {Lib=C}
+  (    1 +5V )
+  (    2 GND )
+ )
+)
+*
+{ Allowed footprints by component:
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 7 "/EN" "EN"
+ S1 6
+ P1 8
+ S2 6
+Net 8 "/RS" "RS"
+ P1 7
+ S1 4
+ S2 4
+Net 9 "+5V" "+5V"
+ C2 1
+ P1 9
+ RV1 1
+ S1 2
+ D1 1
+ P2 9
+ S2 2
+Net 10 "/D6" "D6"
+ S2 13
+ JP6 1
+ S1 13
+ JP7 1
+Net 11 "/D7" "D7"
+ JP8 1
+ JP9 1
+ S1 14
+ S2 14
+Net 12 "/D5" "D5"
+ S1 12
+ S2 12
+ JP4 1
+ JP5 1
+Net 13 "/D4" "D4"
+ S1 11
+ JP3 1
+ JP2 1
+ S2 11
+Net 14 "/C3" "C3"
+ JP7 2
+ P2 4
+Net 15 "/B0" "B0"
+ P1 1
+ JP2 2
+Net 16 "/B1" "B1"
+ P1 2
+ JP4 2
+Net 17 "/B2" "B2"
+ P1 3
+ JP6 2
+Net 18 "/B3" "B3"
+ JP8 2
+ P1 4
+Net 19 "/C7" "C7"
+ JP3 2
+ P2 8
+Net 20 "/C6" "C6"
+ P2 7
+ JP5 2
+Net 21 "/C5" "C5"
+ P2 6
+ JP9 2
+Net 32 "GND" "GND"
+ SW5 2
+ S2 5
+ S2 1
+ P1 10
+ C2 2
+ P2 10
+ RV1 3
+ S1 1
+ S1 5
+Net 33 "/CONTRAST" "CONTRAST"
+ RV1 2
+ S1 3
+ S2 3
+Net 34 "" ""
+ SW5 3
+ D1 2
+}
+#End

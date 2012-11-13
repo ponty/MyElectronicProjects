@@ -1,0 +1,122 @@
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Mon 28 Mar 2011 11:31:43 PM CEST
+
+BeginCmp
+TimeStamp = /4D1212DF;
+Reference = C2;
+ValeurCmp = 100n;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90F30B;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDBF;
+Reference = JP1;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDD7;
+Reference = JP2;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDDB;
+Reference = JP3;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDE2;
+Reference = JP4;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDE1;
+Reference = JP5;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDE6;
+Reference = JP6;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDE7;
+Reference = JP7;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDEA;
+Reference = JP8;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90FDE9;
+Reference = JP9;
+ValeurCmp = JUMPER;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D135F76;
+Reference = P1;
+ValeurCmp = A_UP;
+IdModule  = SIL-12;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90EC3E;
+Reference = P2;
+ValeurCmp = A_UP;
+IdModule  = SIL-12;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90E8D7;
+Reference = RV1;
+ValeurCmp = 10k-20k;
+IdModule  = SIL-3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90E789;
+Reference = S1;
+ValeurCmp = OLD;
+IdModule  = pin_array_8x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90EA93;
+Reference = S2;
+ValeurCmp = NEW;
+IdModule  = SIL-14;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D90EDB4;
+Reference = SW5;
+ValeurCmp = SWITCH_INV;
+IdModule  = SIL-3;
+EndCmp
+
+EndListe

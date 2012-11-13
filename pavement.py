@@ -42,7 +42,12 @@ options.paved.clean.patterns += ['*.pickle',
                                  '*.zip',   
                                  'distribute_setup.py',
                                  '*.bak',
+                                 
+                                 # kicad
                                  '$savepcb.brd',
+                                 '*.erc',
+                                 '*.000',
+                                 
                                  ]
 
 options.paved.dist.manifest.include.remove('distribute_setup.py')

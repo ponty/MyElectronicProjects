@@ -1,0 +1,55 @@
+EESchema (20090216-final)  >> Creation date: Mon 11 Oct 2010 02:34:48 PM CEST
+
+#Cmp ( order = Reference )
+| C1         C           
+| C2         CP1         
+| C3         C           
+| C4         C           
+| D1         DIODE       
+| D2         DIODE       
+| D3         LED         
+| J1         DB25        
+| K1         CONN_3      
+| P1         CONN_6      
+| Q1         BC237       
+| Q2         BC307       
+| Q3         BC237       
+| R1         R           
+| R2         R           
+| R3         R           
+| R4         R           
+| R5         R           
+| R6         R           
+| R7         R           
+| U1         74LS244     
+| U2         LM317       
+| U3         7805        
+#End Cmp
+
+#Cmp ( order = Value )
+| 74LS244      U1        
+| 7805         U3        
+| BC237        Q1        
+| BC237        Q3        
+| BC307        Q2        
+| C            C1        
+| C            C3        
+| C            C4        
+| CONN_3       K1        
+| CONN_6       P1        
+| CP1          C2        
+| DB25         J1        
+| DIODE        D1        
+| DIODE        D2        
+| LED          D3        
+| LM317        U2        
+| R            R1        
+| R            R2        
+| R            R3        
+| R            R4        
+| R            R5        
+| R            R6        
+| R            R7        
+#End Cmp
+
+#End List
