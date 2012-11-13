@@ -117,7 +117,7 @@ Sources
 
       .. image:: http://logix4u.net/images/stories/legacy_ports/parallel_port/tutorial/parallel.gif
 
-`ISP pinout <http://image.pinout.net/pinout_10_pin_files/connector_pinout.php?image=avr_icsp.png>`_
+`AVR ISP Header Pinouts <http://image.pinout.net/pinout_10_pin_files/connector_pinout.php?image=avr_icsp.png>`_
 
       .. image:: http://image.pinout.net/pinout_10_pin_files/avr_icsp.png
 

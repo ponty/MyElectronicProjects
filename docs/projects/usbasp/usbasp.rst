@@ -206,7 +206,7 @@ Sources
       .. image:: http://www.fischl.de/usbasp/bilder/usbasp_circuit.png
       
 
-`ISP pinout <http://image.pinout.net/pinout_10_pin_files/connector_pinout.php?image=avr_icsp.png>`_
+`AVR ISP Header Pinouts <http://image.pinout.net/pinout_10_pin_files/connector_pinout.php?image=avr_icsp.png>`_
 
       .. image:: http://image.pinout.net/pinout_10_pin_files/avr_icsp.png
 
