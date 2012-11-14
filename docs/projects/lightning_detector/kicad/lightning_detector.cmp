@@ -1,0 +1,164 @@
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Tue 15 Mar 2011 11:05:11 AM CET
+
+BeginCmp
+TimeStamp = /4D7F22C7;
+Reference = BT1;
+ValeurCmp = BATTERY;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2310;
+Reference = C1;
+ValeurCmp = 10p;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F233D;
+Reference = C2;
+ValeurCmp = 1n;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F23C5;
+Reference = C3;
+ValeurCmp = 120p;
+IdModule  = C2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F228B;
+Reference = C4;
+ValeurCmp = 10u;
+IdModule  = C1V5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2FD0;
+Reference = C5;
+ValeurCmp = 100u;
+IdModule  = C1V7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F22B8;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F22A3;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F232A;
+Reference = L1;
+ValeurCmp = 10mH;
+IdModule  = INDUCTOR_V;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2330;
+Reference = L2;
+ValeurCmp = 1mH;
+IdModule  = C2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F26A1;
+Reference = P1;
+ValeurCmp = ANT;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2359;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = TO39EBC;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F22D2;
+Reference = Q2;
+ValeurCmp = PNP;
+IdModule  = TO39EBC;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F22DC;
+Reference = Q3;
+ValeurCmp = NPN;
+IdModule  = TO39EBC;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F230C;
+Reference = R1;
+ValeurCmp = 270k;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2350;
+Reference = R2;
+ValeurCmp = 1M;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2345;
+Reference = R3;
+ValeurCmp = 270k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F23B5;
+Reference = R4;
+ValeurCmp = 10k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F24C5;
+Reference = R5;
+ValeurCmp = 82k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F257E;
+Reference = R6;
+ValeurCmp = 3.9k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F25D5;
+Reference = R7;
+ValeurCmp = 1k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F25DC;
+Reference = R8;
+ValeurCmp = 220;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7F2F83;
+Reference = SW1;
+ValeurCmp = SPST;
+IdModule  = SIL-2;
+EndCmp
+
+EndListe

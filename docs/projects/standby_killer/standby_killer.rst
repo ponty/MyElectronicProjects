@@ -8,12 +8,12 @@ Status: OK
 Schematic
 ----------
 
-      .. image:: optotriak.png
+      .. image:: standby_killer.png
 
 Board
 ----------
 
-      .. image:: optotriak-brd.png
+      .. image:: standby_killer-brd.png
 
 
 Sources

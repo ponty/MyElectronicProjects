@@ -1,5 +1,5 @@
 ======================
-usb1wire
+USB 1wire hub
 ======================
 
 Status: OK
@@ -34,14 +34,14 @@ V-USB defines::
 
 
 ..  [[[cog
-..  s=open('docs/template1.txt').read().format(project='usb1wire')
+..  s=open('docs/template1.txt').read().format(project='usb_1wire_hub')
 ..  cog.outl(s)
 ..  ]]]
 
 Schematic
 ----------
 
-      .. eagle-image:: usb1wire.sch
+      .. eagle-image:: usb_1wire_hub.sch
                 :resolution: 150
 
 .. raw:: latex
@@ -53,23 +53,23 @@ Board
 
 Normal, bottom mirrored, wires only:
 
-      .. eagle-image:: usb1wire.brd
+      .. eagle-image:: usb_1wire_hub.brd
                 :command:   display all
                 :resolution: 300
 
-      .. eagle-image:: usb1wire.brd
+      .. eagle-image:: usb_1wire_hub.brd
                 :resolution: 300
                 :layers: pads,vias, bottom, dimension
                 :mirror:
 
-      .. eagle-image:: usb1wire.brd
+      .. eagle-image:: usb_1wire_hub.brd
                 :resolution: 300
                 :layers: document, pads,vias, top, dimension
 
 Partlist
 ----------
 
-      .. eagle-partlist:: usb1wire.brd
+      .. eagle-partlist:: usb_1wire_hub.brd
             :header: part, value , position
 
 3D view
@@ -79,27 +79,27 @@ Partlist
 Front
 ------------
 
-      .. eagle-image3d:: usb1wire.brd
+      .. eagle-image3d:: usb_1wire_hub.brd
 
 ------------
 Right side
 ------------
 
-      .. eagle-image3d:: usb1wire.brd
+      .. eagle-image3d:: usb_1wire_hub.brd
             :pcbrotate:  90,45,90
 
 ------------
 Left side
 ------------
 
-      .. eagle-image3d:: usb1wire.brd
+      .. eagle-image3d:: usb_1wire_hub.brd
             :pcbrotate:  90,-45,-90
 
 ------------
 Bottom
 ------------
 
-      .. eagle-image3d:: usb1wire.brd
+      .. eagle-image3d:: usb_1wire_hub.brd
             :pcbrotate:  0,0,180
 
 

@@ -5,7 +5,7 @@ Status: OK
 
 It is used for testing USB power.
 
-.. eagle-image:: usbled.sch
+.. eagle-image:: usb_led.sch
             :resolution: 150
 
-.. image:: usbled.jpg
+.. image:: usb_led.jpg

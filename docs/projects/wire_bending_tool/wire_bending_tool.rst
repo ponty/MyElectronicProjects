@@ -16,7 +16,7 @@ Board
 
 Normal:
 
-      .. eagle-image:: bendingtool.brd
+      .. eagle-image:: wire_bending_tool.brd
                 :command:   display all
                 :resolution: 300
 
@@ -28,13 +28,13 @@ Normal:
 Front
 ------------
 
-      .. eagle-image3d:: bendingtool.brd
+      .. eagle-image3d:: wire_bending_tool.brd
 
 ------------
 Right side
 ------------
 
-      .. eagle-image3d:: bendingtool.brd
+      .. eagle-image3d:: wire_bending_tool.brd
             :pcbrotate:  90,45,90
 
 

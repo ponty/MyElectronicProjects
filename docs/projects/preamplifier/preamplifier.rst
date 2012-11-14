@@ -1,32 +1,20 @@
-=========
-alarm
-=========
+=======================
+Preamplifier
+=======================
 
-Status: OK
-
-Pins
------
-
-========= ========= =========== 
-board pin  AVR pin  Arduino pin 
-========= ========= ===========
-in         PC3       A3      
-speaker    PB1       D9
-debug in   PC0       A0      
-debug LED  PC5       A5
-========= ========= =========== 
+Status: 
 
 
 
 ..  [[[cog
-..  s=open('docs/template1.txt').read().format(project='alarm')
+..  s=open('docs/template1.txt').read().format(project='preamplifier')
 ..  cog.outl(s)
 ..  ]]]
 
 Schematic
 ----------
 
-      .. eagle-image:: alarm.sch
+      .. eagle-image:: preamplifier.sch
                 :resolution: 150
 
 .. raw:: latex
@@ -38,23 +26,23 @@ Board
 
 Normal, bottom mirrored, wires only:
 
-      .. eagle-image:: alarm.brd
+      .. eagle-image:: preamplifier.brd
                 :command:   display all
                 :resolution: 300
 
-      .. eagle-image:: alarm.brd
+      .. eagle-image:: preamplifier.brd
                 :resolution: 300
                 :layers: pads,vias, bottom, dimension
                 :mirror:
 
-      .. eagle-image:: alarm.brd
+      .. eagle-image:: preamplifier.brd
                 :resolution: 300
                 :layers: document, pads,vias, top, dimension
 
 Partlist
 ----------
 
-      .. eagle-partlist:: alarm.brd
+      .. eagle-partlist:: preamplifier.brd
             :header: part, value , position
 
 3D view
@@ -64,27 +52,27 @@ Partlist
 Front
 ------------
 
-      .. eagle-image3d:: alarm.brd
+      .. eagle-image3d:: preamplifier.brd
 
 ------------
 Right side
 ------------
 
-      .. eagle-image3d:: alarm.brd
+      .. eagle-image3d:: preamplifier.brd
             :pcbrotate:  90,45,90
 
 ------------
 Left side
 ------------
 
-      .. eagle-image3d:: alarm.brd
+      .. eagle-image3d:: preamplifier.brd
             :pcbrotate:  90,-45,-90
 
 ------------
 Bottom
 ------------
 
-      .. eagle-image3d:: alarm.brd
+      .. eagle-image3d:: preamplifier.brd
             :pcbrotate:  0,0,180
 
 
@@ -92,7 +80,12 @@ Bottom
 
 ..  [[[end]]]
 
-Sources
---------
 
-Based on this design: http://www.edn.com/article/511304-Detect_live_ac_mains_lines.php
+Sources
+-----------
+
+original design
+
+      .. image:: preamp00.png
+
+       

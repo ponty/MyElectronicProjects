@@ -1,5 +1,5 @@
 =======================
-audio_amplifier
+audio amplifier
 =======================
 
 Status: under construction
