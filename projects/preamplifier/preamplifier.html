@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>20. Preamplifier &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
+    <link rel="next" title="21. propic2 PIC programmer" href="../propic2/propic2.html" />
+    <link rel="prev" title="19. Pong" href="../pong/pong.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../propic2/propic2.html" title="21. propic2 PIC programmer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pong/pong.html" title="19. Pong"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="preamplifier">
+<h1>20. Preamplifier<a class="headerlink" href="#preamplifier" title="Permalink to this headline">¶</a></h1>
+<p>Status:</p>
+<div class="section" id="schematic">
+<h2>20.1. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/preamplifier_sch_74.png" src="../../_images/preamplifier_sch_74.png" />
+</div></blockquote>
+</div>
+<div class="section" id="board">
+<h2>20.2. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<p>Normal, bottom mirrored, wires only:</p>
+<blockquote>
+<div><img alt="../../_images/preamplifier_brd_75.png" src="../../_images/preamplifier_brd_75.png" />
+<img alt="../../_images/preamplifier_brd_76.png" src="../../_images/preamplifier_brd_76.png" />
+<img alt="../../_images/preamplifier_brd_77.png" src="../../_images/preamplifier_brd_77.png" />
+</div></blockquote>
+</div>
+<div class="section" id="partlist">
+<h2>20.3. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<caption></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">part</th>
+<th class="head">value</th>
+<th class="head">position</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C1</td>
+<td>1u</td>
+<td>(20.28 19.21)</td>
+</tr>
+<tr class="row-odd"><td>C2</td>
+<td>1u</td>
+<td>(41.69 3.37)</td>
+</tr>
+<tr class="row-even"><td>C3</td>
+<td>47n</td>
+<td>(19.21 3.21)</td>
+</tr>
+<tr class="row-odd"><td>C4</td>
+<td>100p</td>
+<td>(6.97 24.58)</td>
+</tr>
+<tr class="row-even"><td>C5</td>
+<td>10u</td>
+<td>(41.66 20.61)</td>
+</tr>
+<tr class="row-odd"><td>C7</td>
+<td>100u</td>
+<td>(34.5 23.53)</td>
+</tr>
+<tr class="row-even"><td>R1</td>
+<td>10k</td>
+<td>(6.97 3.42)</td>
+</tr>
+<tr class="row-odd"><td>R2</td>
+<td>1M</td>
+<td>(5.97 19.5)</td>
+</tr>
+<tr class="row-even"><td>R3</td>
+<td>1M</td>
+<td>(19.48 8.29)</td>
+</tr>
+<tr class="row-odd"><td>R4</td>
+<td>27k</td>
+<td>(32.99 3.37)</td>
+</tr>
+<tr class="row-even"><td>R6</td>
+<td>330k</td>
+<td>(28.64 12.26)</td>
+</tr>
+<tr class="row-odd"><td>R7</td>
+<td>330</td>
+<td>(47.72 16.31)</td>
+</tr>
+<tr class="row-even"><td>R8</td>
+<td>100k</td>
+<td>(51.64 16.31)</td>
+</tr>
+<tr class="row-odd"><td>R9</td>
+<td>100k</td>
+<td>(13.93 21.48)</td>
+</tr>
+<tr class="row-even"><td>R10</td>
+<td>100k</td>
+<td>(19.48 13.37)</td>
+</tr>
+<tr class="row-odd"><td>SL1</td>
+<td>IN</td>
+<td>(3.81 11.96)</td>
+</tr>
+<tr class="row-even"><td>SL2</td>
+<td>OUT</td>
+<td>(50.82 6.12)</td>
+</tr>
+<tr class="row-odd"><td>SL3</td>
+<td>9V Bat</td>
+<td>(26.88 22.8)</td>
+</tr>
+<tr class="row-even"><td>U1</td>
+<td>TL081P</td>
+<td>(36.53 12.26)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="d-view">
+<h2>20.4. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="front">
+<h3>20.4.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/preamplifier_brd_3d_78.png" src="../../_images/preamplifier_brd_3d_78.png" />
+</div></blockquote>
+</div>
+<div class="section" id="right-side">
+<h3>20.4.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/preamplifier_brd_3d_79.png" src="../../_images/preamplifier_brd_3d_79.png" />
+</div></blockquote>
+</div>
+<div class="section" id="left-side">
+<h3>20.4.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/preamplifier_brd_3d_80.png" src="../../_images/preamplifier_brd_3d_80.png" />
+</div></blockquote>
+</div>
+<div class="section" id="bottom">
+<h3>20.4.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/preamplifier_brd_3d_81.png" src="../../_images/preamplifier_brd_3d_81.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="sources">
+<h2>20.5. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<p>original design</p>
+<blockquote>
+<div><img alt="../../_images/preamp00.png" src="../../_images/preamp00.png" />
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">20. Preamplifier</a><ul>
+<li><a class="reference internal" href="#schematic">20.1. Schematic</a></li>
+<li><a class="reference internal" href="#board">20.2. Board</a></li>
+<li><a class="reference internal" href="#partlist">20.3. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">20.4. 3D view</a><ul>
+<li><a class="reference internal" href="#front">20.4.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">20.4.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">20.4.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">20.4.4. Bottom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sources">20.5. Sources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pong/pong.html"
+                        title="previous chapter">19. Pong</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../propic2/propic2.html"
+                        title="next chapter">21. propic2 PIC programmer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/projects/preamplifier/preamplifier.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../propic2/propic2.html" title="21. propic2 PIC programmer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pong/pong.html" title="19. Pong"
+             >previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

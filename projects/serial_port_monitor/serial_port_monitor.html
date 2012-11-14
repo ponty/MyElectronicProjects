@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>24. serial port monitor &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
+    <link rel="next" title="25. standby killer" href="../standby_killer/standby_killer.html" />
+    <link rel="prev" title="23. Serial port loopback plug" href="../serial_port_loopback/serial_port_loopback.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../standby_killer/standby_killer.html" title="25. standby killer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../serial_port_loopback/serial_port_loopback.html" title="23. Serial port loopback plug"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="serial-port-monitor">
+<h1>24. serial port monitor<a class="headerlink" href="#serial-port-monitor" title="Permalink to this headline">¶</a></h1>
+<p>Status: OK</p>
+<p>On each signal there is one LED for positive
+and one LED for negative voltage.
+It is easy to change connections or
+connect external parts. <a class="reference external" href="http://www.alloy.com.au/support.asp?TID=194">Examples</a>: Loop-Back, Null Modem,..</p>
+<div class="section" id="schematic">
+<h2>24.1. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/serial_port_monitor_sch_82.png" src="../../_images/serial_port_monitor_sch_82.png" />
+</div></blockquote>
+</div>
+<div class="section" id="board">
+<h2>24.2. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<p>Normal, bottom mirrored, wires only:</p>
+<blockquote>
+<div><img alt="../../_images/serial_port_monitor_brd_83.png" src="../../_images/serial_port_monitor_brd_83.png" />
+<img alt="../../_images/serial_port_monitor_brd_84.png" src="../../_images/serial_port_monitor_brd_84.png" />
+<img alt="../../_images/serial_port_monitor_brd_85.png" src="../../_images/serial_port_monitor_brd_85.png" />
+</div></blockquote>
+</div>
+<div class="section" id="partlist">
+<h2>24.3. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<caption></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">part</th>
+<th class="head">value</th>
+<th class="head">position</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HIGH</td>
+<td>LB10</td>
+<td>(0.75 1.65)</td>
+</tr>
+<tr class="row-odd"><td>LOW</td>
+<td>LB10</td>
+<td>(0.75 2.15)</td>
+</tr>
+<tr class="row-even"><td>R1</td>
+<td>1k</td>
+<td>(0.4 1.25)</td>
+</tr>
+<tr class="row-odd"><td>R2</td>
+<td>1k</td>
+<td>(0.3 1.25)</td>
+</tr>
+<tr class="row-even"><td>R3</td>
+<td>1k</td>
+<td>(0.5 1.25)</td>
+</tr>
+<tr class="row-odd"><td>R4</td>
+<td>1k</td>
+<td>(0.6 1.25)</td>
+</tr>
+<tr class="row-even"><td>R5</td>
+<td>1k</td>
+<td>(0.8 1.25)</td>
+</tr>
+<tr class="row-odd"><td>R6</td>
+<td>1k</td>
+<td>(0.9 1.25)</td>
+</tr>
+<tr class="row-even"><td>R7</td>
+<td>1k</td>
+<td>(1 1.25)</td>
+</tr>
+<tr class="row-odd"><td>R8</td>
+<td>1k</td>
+<td>(1.1 1.25)</td>
+</tr>
+<tr class="row-even"><td>SV1</td>
+<td>&nbsp;</td>
+<td>(1.7 0.65)</td>
+</tr>
+<tr class="row-odd"><td>SV2</td>
+<td>&nbsp;</td>
+<td>(1.2 0.65)</td>
+</tr>
+<tr class="row-even"><td>SV3</td>
+<td>&nbsp;</td>
+<td>(1.45 0.65)</td>
+</tr>
+<tr class="row-odd"><td>X2</td>
+<td>&nbsp;</td>
+<td>(2.15 0.9)</td>
+</tr>
+<tr class="row-even"><td>XPC</td>
+<td>&nbsp;</td>
+<td>(-0.15 0.9)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="d-view">
+<h2>24.4. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="front">
+<h3>24.4.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/serial_port_monitor_brd_3d_86.png" src="../../_images/serial_port_monitor_brd_3d_86.png" />
+</div></blockquote>
+</div>
+<div class="section" id="right-side">
+<h3>24.4.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/serial_port_monitor_brd_3d_87.png" src="../../_images/serial_port_monitor_brd_3d_87.png" />
+</div></blockquote>
+</div>
+<div class="section" id="left-side">
+<h3>24.4.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/serial_port_monitor_brd_3d_88.png" src="../../_images/serial_port_monitor_brd_3d_88.png" />
+</div></blockquote>
+</div>
+<div class="section" id="bottom">
+<h3>24.4.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/serial_port_monitor_brd_3d_89.png" src="../../_images/serial_port_monitor_brd_3d_89.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="images">
+<h2>24.5. Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/img1.jpg" src="../../_images/img1.jpg" />
+<img alt="../../_images/img2.jpg" src="../../_images/img2.jpg" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">24. serial port monitor</a><ul>
+<li><a class="reference internal" href="#schematic">24.1. Schematic</a></li>
+<li><a class="reference internal" href="#board">24.2. Board</a></li>
+<li><a class="reference internal" href="#partlist">24.3. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">24.4. 3D view</a><ul>
+<li><a class="reference internal" href="#front">24.4.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">24.4.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">24.4.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">24.4.4. Bottom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#images">24.5. Images</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../serial_port_loopback/serial_port_loopback.html"
+                        title="previous chapter">23. Serial port loopback plug</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../standby_killer/standby_killer.html"
+                        title="next chapter">25. standby killer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/projects/serial_port_monitor/serial_port_monitor.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../standby_killer/standby_killer.html" title="25. standby killer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../serial_port_loopback/serial_port_loopback.html" title="23. Serial port loopback plug"
+             >previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

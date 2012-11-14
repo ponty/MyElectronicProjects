@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>10. IR amplifier &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
+    <link rel="next" title="11. LCD module" href="../lcd_module/lcd_module.html" />
+    <link rel="prev" title="9. Garmin eTrex data cable" href="../garmin_data_cable/garmin_data_cable.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../lcd_module/lcd_module.html" title="11. LCD module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../garmin_data_cable/garmin_data_cable.html" title="9. Garmin eTrex data cable"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ir-amplifier">
+<h1>10. IR amplifier<a class="headerlink" href="#ir-amplifier" title="Permalink to this headline">¶</a></h1>
+<p>Status: OK</p>
+<div class="section" id="schematic">
+<h2>10.1. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/ir_amplifier_sch_25.png" src="../../_images/ir_amplifier_sch_25.png" />
+</div></blockquote>
+</div>
+<div class="section" id="board">
+<h2>10.2. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<p>Normal, bottom mirrored, wires only:</p>
+<blockquote>
+<div><img alt="../../_images/ir_amplifier_brd_26.png" src="../../_images/ir_amplifier_brd_26.png" />
+<img alt="../../_images/ir_amplifier_brd_27.png" src="../../_images/ir_amplifier_brd_27.png" />
+<img alt="../../_images/ir_amplifier_brd_28.png" src="../../_images/ir_amplifier_brd_28.png" />
+</div></blockquote>
+</div>
+<div class="section" id="partlist">
+<h2>10.3. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<caption></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">part</th>
+<th class="head">value</th>
+<th class="head">position</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C1</td>
+<td>47u 16V</td>
+<td>(48.26 34.29)</td>
+</tr>
+<tr class="row-odd"><td>C2</td>
+<td>10u</td>
+<td>(10.16 22.86)</td>
+</tr>
+<tr class="row-even"><td>C3</td>
+<td>1n</td>
+<td>(29.21 31.75)</td>
+</tr>
+<tr class="row-odd"><td>C4</td>
+<td>10n</td>
+<td>(16.51 46.99)</td>
+</tr>
+<tr class="row-even"><td>C5</td>
+<td>100u 25V</td>
+<td>(40.64 39.37)</td>
+</tr>
+<tr class="row-odd"><td>D2</td>
+<td>1N4148</td>
+<td>(34.29 31.75)</td>
+</tr>
+<tr class="row-even"><td>D3</td>
+<td>IR</td>
+<td>(19.05 52.07)</td>
+</tr>
+<tr class="row-odd"><td>IC1</td>
+<td>7805</td>
+<td>(41.91 49.53)</td>
+</tr>
+<tr class="row-even"><td>IC2</td>
+<td>555</td>
+<td>(16.51 39.37)</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>120</td>
+<td>(17.78 22.86)</td>
+</tr>
+<tr class="row-even"><td>R2</td>
+<td>15k</td>
+<td>(26.67 39.37)</td>
+</tr>
+<tr class="row-odd"><td>R3</td>
+<td>10k</td>
+<td>(26.67 26.67)</td>
+</tr>
+<tr class="row-even"><td>R4</td>
+<td>120</td>
+<td>(10.16 43.18)</td>
+</tr>
+<tr class="row-odd"><td>R5</td>
+<td>1k</td>
+<td>(29.21 46.99)</td>
+</tr>
+<tr class="row-even"><td>T1</td>
+<td>BC547</td>
+<td>(17.78 26.67)</td>
+</tr>
+<tr class="row-odd"><td>U$1</td>
+<td>TSOP</td>
+<td>(11.43 19.05)</td>
+</tr>
+<tr class="row-even"><td>U$2</td>
+<td>DC ALJ</td>
+<td>(44.45 27.94)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="d-view">
+<h2>10.4. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="front">
+<h3>10.4.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/ir_amplifier_brd_3d_29.png" src="../../_images/ir_amplifier_brd_3d_29.png" />
+</div></blockquote>
+</div>
+<div class="section" id="right-side">
+<h3>10.4.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/ir_amplifier_brd_3d_30.png" src="../../_images/ir_amplifier_brd_3d_30.png" />
+</div></blockquote>
+</div>
+<div class="section" id="left-side">
+<h3>10.4.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/ir_amplifier_brd_3d_31.png" src="../../_images/ir_amplifier_brd_3d_31.png" />
+</div></blockquote>
+</div>
+<div class="section" id="bottom">
+<h3>10.4.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/ir_amplifier_brd_3d_32.png" src="../../_images/ir_amplifier_brd_3d_32.png" />
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">10. IR amplifier</a><ul>
+<li><a class="reference internal" href="#schematic">10.1. Schematic</a></li>
+<li><a class="reference internal" href="#board">10.2. Board</a></li>
+<li><a class="reference internal" href="#partlist">10.3. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">10.4. 3D view</a><ul>
+<li><a class="reference internal" href="#front">10.4.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">10.4.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">10.4.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">10.4.4. Bottom</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../garmin_data_cable/garmin_data_cable.html"
+                        title="previous chapter">9. Garmin eTrex data cable</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../lcd_module/lcd_module.html"
+                        title="next chapter">11. LCD module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/projects/ir_amplifier/ir_amplifier.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../lcd_module/lcd_module.html" title="11. LCD module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../garmin_data_cable/garmin_data_cable.html" title="9. Garmin eTrex data cable"
+             >previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

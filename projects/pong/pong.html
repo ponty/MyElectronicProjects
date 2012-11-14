@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>19. Pong &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
+    <link rel="next" title="20. Preamplifier" href="../preamplifier/preamplifier.html" />
+    <link rel="prev" title="18. PIC ICSP programmer" href="../pic_icsp_programmer/pic_icsp_programmer.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../preamplifier/preamplifier.html" title="20. Preamplifier"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pic_icsp_programmer/pic_icsp_programmer.html" title="18. PIC ICSP programmer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pong">
+<h1>19. Pong<a class="headerlink" href="#pong" title="Permalink to this headline">¶</a></h1>
+<p>Status: ??</p>
+<p>Arduino based pong console</p>
+<div class="section" id="schematic">
+<h2>19.1. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/pong_sch_66.png" src="../../_images/pong_sch_66.png" />
+</div></blockquote>
+</div>
+<div class="section" id="board">
+<h2>19.2. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<p>Normal, bottom mirrored, wires only:</p>
+<blockquote>
+<div><img alt="../../_images/pong_brd_67.png" src="../../_images/pong_brd_67.png" />
+<img alt="../../_images/pong_brd_68.png" src="../../_images/pong_brd_68.png" />
+<img alt="../../_images/pong_brd_69.png" src="../../_images/pong_brd_69.png" />
+</div></blockquote>
+</div>
+<div class="section" id="partlist">
+<h2>19.3. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<caption></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">part</th>
+<th class="head">value</th>
+<th class="head">position</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C1</td>
+<td>4u7</td>
+<td>(1.1 1.7)</td>
+</tr>
+<tr class="row-odd"><td>C2</td>
+<td>100n</td>
+<td>(1.05 1.5)</td>
+</tr>
+<tr class="row-even"><td>C3</td>
+<td>100n</td>
+<td>(1.05 1)</td>
+</tr>
+<tr class="row-odd"><td>C4</td>
+<td>22p</td>
+<td>(1.15 0.8)</td>
+</tr>
+<tr class="row-even"><td>C5</td>
+<td>22p</td>
+<td>(1.2 0.9)</td>
+</tr>
+<tr class="row-odd"><td>D1</td>
+<td>1N4148DO35-7</td>
+<td>(1.85 1)</td>
+</tr>
+<tr class="row-even"><td>D2</td>
+<td>1N4148DO35-10</td>
+<td>(1.9 1.5)</td>
+</tr>
+<tr class="row-odd"><td>IC1</td>
+<td>&nbsp;</td>
+<td>(1.05 1.25)</td>
+</tr>
+<tr class="row-even"><td>JP1</td>
+<td>&nbsp;</td>
+<td>(1.05 0.5)</td>
+</tr>
+<tr class="row-odd"><td>Q1</td>
+<td>20MHz</td>
+<td>(1.25 0.6)</td>
+</tr>
+<tr class="row-even"><td>R1</td>
+<td>330</td>
+<td>(1.9 0.7)</td>
+</tr>
+<tr class="row-odd"><td>R2</td>
+<td>1k</td>
+<td>(1.95 0.8)</td>
+</tr>
+<tr class="row-even"><td>R6</td>
+<td>10k</td>
+<td>(0.7 0.9)</td>
+</tr>
+<tr class="row-odd"><td>S1</td>
+<td>&nbsp;</td>
+<td>(1 0.25)</td>
+</tr>
+<tr class="row-even"><td>SV1</td>
+<td>ISP</td>
+<td>(1.25 2)</td>
+</tr>
+<tr class="row-odd"><td>SV2</td>
+<td>POT1</td>
+<td>(0.4 0.2)</td>
+</tr>
+<tr class="row-even"><td>SV3</td>
+<td>POT2</td>
+<td>(0.4 2)</td>
+</tr>
+<tr class="row-odd"><td>X3</td>
+<td>AUDIO</td>
+<td>(2.75 1.4)</td>
+</tr>
+<tr class="row-even"><td>X4</td>
+<td>VIDEO</td>
+<td>(2.75 0.8)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="d-view">
+<h2>19.4. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="front">
+<h3>19.4.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/pong_brd_3d_70.png" src="../../_images/pong_brd_3d_70.png" />
+</div></blockquote>
+</div>
+<div class="section" id="right-side">
+<h3>19.4.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/pong_brd_3d_71.png" src="../../_images/pong_brd_3d_71.png" />
+</div></blockquote>
+</div>
+<div class="section" id="left-side">
+<h3>19.4.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/pong_brd_3d_72.png" src="../../_images/pong_brd_3d_72.png" />
+</div></blockquote>
+</div>
+<div class="section" id="bottom">
+<h3>19.4.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../_images/pong_brd_3d_73.png" src="../../_images/pong_brd_3d_73.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="sources">
+<h2>19.5. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>similar projects:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.instructables.com/id/Ardu-pong-the-Arduino-based-pong-console/">http://www.instructables.com/id/Ardu-pong-the-Arduino-based-pong-console/</a></li>
+<li><a class="reference external" href="http://www.instructables.com/id/2-player-Pong-using-Arduino/">http://www.instructables.com/id/2-player-Pong-using-Arduino/</a></li>
+<li><a class="reference external" href="http://blog.makezine.com/2007/08/22/arduino-pong/">http://blog.makezine.com/2007/08/22/arduino-pong/</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">19. Pong</a><ul>
+<li><a class="reference internal" href="#schematic">19.1. Schematic</a></li>
+<li><a class="reference internal" href="#board">19.2. Board</a></li>
+<li><a class="reference internal" href="#partlist">19.3. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">19.4. 3D view</a><ul>
+<li><a class="reference internal" href="#front">19.4.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">19.4.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">19.4.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">19.4.4. Bottom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sources">19.5. Sources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pic_icsp_programmer/pic_icsp_programmer.html"
+                        title="previous chapter">18. PIC ICSP programmer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../preamplifier/preamplifier.html"
+                        title="next chapter">20. Preamplifier</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/projects/pong/pong.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../preamplifier/preamplifier.html" title="20. Preamplifier"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pic_icsp_programmer/pic_icsp_programmer.html" title="18. PIC ICSP programmer"
+             >previous</a> |</li>
+        <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

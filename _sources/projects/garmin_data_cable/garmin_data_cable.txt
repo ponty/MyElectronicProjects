@@ -22,7 +22,6 @@ Images
 
 .. image:: garmin_data_cable1.jpg
 
-.. image:: garmin_data_cable2.jpg
  
 Sources
 -----------
