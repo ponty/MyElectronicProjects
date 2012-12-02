@@ -6,6 +6,8 @@ Status: OK
 
 It is used for testing logic levels.
 
+Vcc=3-15V
+
 Source: http://www.sentex.net/~mec1995/circ/probe2.htm
 
 .. image:: http://www.sentex.net/~mec1995/circ/probe2.gif

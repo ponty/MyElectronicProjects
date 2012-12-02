@@ -2,9 +2,23 @@
 Pong
 ======================
 
-Status: ??
+Status: OK
 
 Arduino based pong console
+
+
+Pong firmware: https://github.com/ponty/arduino-pong
+
+program config:
+
+.. code-block:: c
+
+    const int pin_wheel1 = 4; // analog
+    const int pin_wheel2 = 5; // analog
+    const int pin_button1 = 4;
+    const int pin_audio = 10;
+
+
 
 ..  [[[cog
 ..  s=open('docs/template1.txt').read().format(project='pong')
