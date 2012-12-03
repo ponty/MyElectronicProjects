@@ -16,63 +16,66 @@ options(
     sphinx=Bunch(
         docroot='docs',
         builddir="_build",
-        ),
+    ),
     pdf=Bunch(
         builddir='_build',
         builder='latex',
     ),
-    )
+)
 
 
-options.paved.clean.rmdirs +=   ['.tox',
-                                 'dist',
-                                 'build' ,
-                                 ]
+options.paved.clean.rmdirs += ['.tox',
+                               'dist',
+                               'build',
+                               ]
 options.paved.clean.patterns += ['*.pickle',
                                  '*.doctree',
-                                 '*.gz' ,
+                                 '*.gz',
                                  'nosetests.xml',
                                  'sloccount.sc',
                                  '*.pdf', '*.tex',
                                  '*_sch_*.png',
                                  '*_brd_*.png',
-                                 '*.b#*', '*.s#*', # eagle
-                                 #'*.pro', 
+                                 '*.b#*', '*.s#*',  # eagle
+                                 #'*.pro',
                                  '*.hex',
-                                 '*.zip',   
+                                 '*.zip',
                                  'distribute_setup.py',
                                  '*.bak',
-                                 
+
                                  # kicad
                                  '$savepcb.brd',
                                  '*.erc',
                                  '*.000',
-                                 
+
                                  ]
 
 options.paved.dist.manifest.include.remove('distribute_setup.py')
 options.paved.dist.manifest.include.remove('paver-minilib.zip')
 
+
 @task
 @needs(
-#           'clean',
-       'cog', 
-       'html', 
-       'pdf',
-       )
+    #           'clean',
+    'cog',
+    'html',
+    'pdf',
+)
 def alltest():
     'all tasks to check'
     pass
+
 
 @task
 @needs('sphinxcontrib.paverutils.html')
 def html():
     pass
 
+
 @task
 @needs('sphinxcontrib.paverutils.pdf')
 def pdf():
     fpdf = list(path('docs/_build/latex').walkfiles('*.pdf'))[0]
-    d=path('docs/_build/html')
+    d = path('docs/_build/html')
     d.makedirs()
     fpdf.copy(d)
