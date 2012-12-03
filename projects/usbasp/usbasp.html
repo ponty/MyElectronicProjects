@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>30. USBasp AVR programmer &mdash; MyElectronicProjects 0.0.0 documentation</title>
+    <title>34. USBasp AVR programmer &mdash; MyElectronicProjects 0.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="top" title="MyElectronicProjects 0.0.0 documentation" href="../../index.html" />
-    <link rel="next" title="31. Wire bending tool" href="../wire_bending_tool/wire_bending_tool.html" />
-    <link rel="prev" title="29. USB LED" href="../usb_led/usb_led.html" /> 
+    <link rel="next" title="35. Wire bending tool" href="../wire_bending_tool/wire_bending_tool.html" />
+    <link rel="prev" title="33. USB LED" href="../usb_led/usb_led.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../wire_bending_tool/wire_bending_tool.html" title="31. Wire bending tool"
+          <a href="../wire_bending_tool/wire_bending_tool.html" title="35. Wire bending tool"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../usb_led/usb_led.html" title="29. USB LED"
+          <a href="../usb_led/usb_led.html" title="33. USB LED"
              accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
       </ul>
@@ -52,13 +52,13 @@
           <div class="body">
             
   <div class="section" id="usbasp-avr-programmer">
-<h1>30. USBasp AVR programmer<a class="headerlink" href="#usbasp-avr-programmer" title="Permalink to this headline">¶</a></h1>
+<h1>34. USBasp AVR programmer<a class="headerlink" href="#usbasp-avr-programmer" title="Permalink to this headline">¶</a></h1>
 <p>Status: OK</p>
 <p>It is used for programming AVR controller and Arduino compatible boards using the USB port.</p>
 <p>firmware, design: <a class="reference external" href="http://www.fischl.de/usbasp/">http://www.fischl.de/usbasp/</a></p>
 <p>USBasp is based on V-USB (<a class="reference external" href="http://www.obdev.at/products/vusb/index.html">http://www.obdev.at/products/vusb/index.html</a>)</p>
 <div class="section" id="v-usb-hardware-recommendation">
-<h2>30.1. V-USB hardware recommendation<a class="headerlink" href="#v-usb-hardware-recommendation" title="Permalink to this headline">¶</a></h2>
+<h2>34.1. V-USB hardware recommendation<a class="headerlink" href="#v-usb-hardware-recommendation" title="Permalink to this headline">¶</a></h2>
 <p>only difference to USBasp: 1.5 kΩ pull-up resistor</p>
 <p><a class="reference external" href="http://vusb.wikidot.com/hardware">http://vusb.wikidot.com/hardware</a></p>
 <img alt="http://vusb.wikidot.com/local--files/hardware/level-conversion-with-zener.gif" src="http://vusb.wikidot.com/local--files/hardware/level-conversion-with-zener.gif" />
@@ -96,7 +96,7 @@ match the requirements.</p>
 </div></blockquote>
 </div>
 <div class="section" id="makefile">
-<h2>30.2. Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h2>
+<h2>34.2. Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h2>
 <p>Tested with atmega88. Makefile settings:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">TARGET</span><span class="o">=</span><span class="n">atmega88</span>
 <span class="n">HFUSE</span><span class="o">=</span><span class="mh">0xdd</span>
@@ -105,7 +105,7 @@ match the requirements.</p>
 </div>
 </div>
 <div class="section" id="test-on-ubuntu">
-<h2>30.3. Test on Ubuntu<a class="headerlink" href="#test-on-ubuntu" title="Permalink to this headline">¶</a></h2>
+<h2>34.3. Test on Ubuntu<a class="headerlink" href="#test-on-ubuntu" title="Permalink to this headline">¶</a></h2>
 <p>checking:</p>
 <div class="highlight-python"><pre>$ lsusb |grep -i 16c0:05dc
 Bus 003 Device 006: ID 16c0:05dc VOTI shared ID for use with libusb
@@ -153,13 +153,13 @@ avrdude done.  Thank you.</pre>
 </div>
 </div>
 <div class="section" id="schematic">
-<h2>30.4. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
+<h2>34.4. Schematic<a class="headerlink" href="#schematic" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><img alt="../../_images/usbasp_sch_108.png" src="../../_images/usbasp_sch_108.png" />
 </div></blockquote>
 </div>
 <div class="section" id="board">
-<h2>30.5. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
+<h2>34.5. Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h2>
 <p>Normal, bottom mirrored, wires only:</p>
 <blockquote>
 <div><img alt="../../_images/usbasp_brd_109.png" src="../../_images/usbasp_brd_109.png" />
@@ -168,7 +168,7 @@ avrdude done.  Thank you.</pre>
 </div></blockquote>
 </div>
 <div class="section" id="partlist">
-<h2>30.6. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
+<h2>34.6. Partlist<a class="headerlink" href="#partlist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><table border="1" class="docutils">
 <caption></caption>
@@ -305,34 +305,34 @@ avrdude done.  Thank you.</pre>
 </div></blockquote>
 </div>
 <div class="section" id="d-view">
-<h2>30.7. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<h2>34.7. 3D view<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="front">
-<h3>30.7.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
+<h3>34.7.1. Front<a class="headerlink" href="#front" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><img alt="../../_images/usbasp_brd_3d_112.png" src="../../_images/usbasp_brd_3d_112.png" />
 </div></blockquote>
 </div>
 <div class="section" id="right-side">
-<h3>30.7.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
+<h3>34.7.2. Right side<a class="headerlink" href="#right-side" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><img alt="../../_images/usbasp_brd_3d_113.png" src="../../_images/usbasp_brd_3d_113.png" />
 </div></blockquote>
 </div>
 <div class="section" id="left-side">
-<h3>30.7.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
+<h3>34.7.3. Left side<a class="headerlink" href="#left-side" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><img alt="../../_images/usbasp_brd_3d_114.png" src="../../_images/usbasp_brd_3d_114.png" />
 </div></blockquote>
 </div>
 <div class="section" id="bottom">
-<h3>30.7.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
+<h3>34.7.4. Bottom<a class="headerlink" href="#bottom" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><img alt="../../_images/usbasp_brd_3d_115.png" src="../../_images/usbasp_brd_3d_115.png" />
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="reset">
-<h2>30.8. Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<h2>34.8. Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
 <p>To reset on Ubuntu:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">logging</span>
@@ -341,8 +341,9 @@ avrdude done.  Thank you.</pre>
 <span class="kn">import</span> <span class="nn">fcntl</span>
 
 <span class="n">ID_VENDOR</span> <span class="o">=</span> <span class="mh">0x16c0</span>
-<span class="n">ID_PRODUCT</span> <span class="o">=</span> <span class="mh">0x05dc</span>     
+<span class="n">ID_PRODUCT</span> <span class="o">=</span> <span class="mh">0x05dc</span>
 <span class="n">USBDEVFS_RESET</span> <span class="o">=</span> <span class="mi">21780</span>
+
 
 <span class="k">def</span> <span class="nf">find</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s">&quot;searching for device (</span><span class="si">%x</span><span class="s">:</span><span class="si">%x</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ID_VENDOR</span><span class="p">,</span> <span class="n">ID_PRODUCT</span><span class="p">))</span>
@@ -353,34 +354,38 @@ avrdude done.  Thank you.</pre>
         <span class="k">print</span><span class="p">(</span><span class="s">&quot;device not found&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">dev</span>
 
+
 <span class="k">def</span> <span class="nf">usbstr</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="n">s</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">s</span><span class="o">=</span><span class="s">&#39;000&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span><span class="o">+</span><span class="n">s</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s">&#39;000&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span> <span class="o">+</span> <span class="n">s</span>
     <span class="k">return</span> <span class="n">s</span>
+
 
 <span class="k">def</span> <span class="nf">usbfs_filename</span><span class="p">(</span><span class="n">dev</span><span class="p">):</span>
     <span class="k">return</span> <span class="s">&#39;/dev/bus/usb/</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">usbstr</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">bus</span><span class="p">),</span> <span class="n">usbstr</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">address</span><span class="p">))</span>
 
+
 <span class="k">def</span> <span class="nf">reset1</span><span class="p">(</span><span class="n">dev</span><span class="p">):</span>
-    <span class="n">fname</span><span class="o">=</span><span class="n">usbfs_filename</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">usbfs_filename</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">&quot;Resetting USB device </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">fname</span><span class="p">)</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-        <span class="n">rc</span> <span class="o">=</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">ioctl</span> <span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">USBDEVFS_RESET</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">rc</span> <span class="o">=</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">ioctl</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">USBDEVFS_RESET</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
             <span class="k">print</span><span class="p">(</span><span class="s">&quot;Error in ioctl&quot;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">)</span>
-    
+
+
 <span class="k">def</span> <span class="nf">reset2</span><span class="p">(</span><span class="n">dev</span><span class="p">):</span>
-    <span class="n">dev</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c"># not working</span>
-    
-<span class="n">dev</span><span class="o">=</span><span class="n">find</span><span class="p">()</span>
+    <span class="n">dev</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>  <span class="c"># not working</span>
+
+<span class="n">dev</span> <span class="o">=</span> <span class="n">find</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">dev</span><span class="p">:</span>
-    <span class="n">reset1</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>    
+    <span class="n">reset1</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="sources">
-<h2>30.9. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<h2>34.9. Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.fischl.de/usbasp/">original design</a></p>
 <blockquote>
 <div><img alt="http://www.fischl.de/usbasp/bilder/usbasp_circuit.png" src="http://www.fischl.de/usbasp/bilder/usbasp_circuit.png" />
@@ -407,32 +412,32 @@ avrdude done.  Thank you.</pre>
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">30. USBasp AVR programmer</a><ul>
-<li><a class="reference internal" href="#v-usb-hardware-recommendation">30.1. V-USB hardware recommendation</a></li>
-<li><a class="reference internal" href="#makefile">30.2. Makefile</a></li>
-<li><a class="reference internal" href="#test-on-ubuntu">30.3. Test on Ubuntu</a></li>
-<li><a class="reference internal" href="#schematic">30.4. Schematic</a></li>
-<li><a class="reference internal" href="#board">30.5. Board</a></li>
-<li><a class="reference internal" href="#partlist">30.6. Partlist</a></li>
-<li><a class="reference internal" href="#d-view">30.7. 3D view</a><ul>
-<li><a class="reference internal" href="#front">30.7.1. Front</a></li>
-<li><a class="reference internal" href="#right-side">30.7.2. Right side</a></li>
-<li><a class="reference internal" href="#left-side">30.7.3. Left side</a></li>
-<li><a class="reference internal" href="#bottom">30.7.4. Bottom</a></li>
+<li><a class="reference internal" href="#">34. USBasp AVR programmer</a><ul>
+<li><a class="reference internal" href="#v-usb-hardware-recommendation">34.1. V-USB hardware recommendation</a></li>
+<li><a class="reference internal" href="#makefile">34.2. Makefile</a></li>
+<li><a class="reference internal" href="#test-on-ubuntu">34.3. Test on Ubuntu</a></li>
+<li><a class="reference internal" href="#schematic">34.4. Schematic</a></li>
+<li><a class="reference internal" href="#board">34.5. Board</a></li>
+<li><a class="reference internal" href="#partlist">34.6. Partlist</a></li>
+<li><a class="reference internal" href="#d-view">34.7. 3D view</a><ul>
+<li><a class="reference internal" href="#front">34.7.1. Front</a></li>
+<li><a class="reference internal" href="#right-side">34.7.2. Right side</a></li>
+<li><a class="reference internal" href="#left-side">34.7.3. Left side</a></li>
+<li><a class="reference internal" href="#bottom">34.7.4. Bottom</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reset">30.8. Reset</a></li>
-<li><a class="reference internal" href="#sources">30.9. Sources</a></li>
+<li><a class="reference internal" href="#reset">34.8. Reset</a></li>
+<li><a class="reference internal" href="#sources">34.9. Sources</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../usb_led/usb_led.html"
-                        title="previous chapter">29. USB LED</a></p>
+                        title="previous chapter">33. USB LED</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../wire_bending_tool/wire_bending_tool.html"
-                        title="next chapter">31. Wire bending tool</a></p>
+                        title="next chapter">35. Wire bending tool</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/projects/usbasp/usbasp.txt"
@@ -462,10 +467,10 @@ avrdude done.  Thank you.</pre>
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../wire_bending_tool/wire_bending_tool.html" title="31. Wire bending tool"
+          <a href="../wire_bending_tool/wire_bending_tool.html" title="35. Wire bending tool"
              >next</a> |</li>
         <li class="right" >
-          <a href="../usb_led/usb_led.html" title="29. USB LED"
+          <a href="../usb_led/usb_led.html" title="33. USB LED"
              >previous</a> |</li>
         <li><a href="../../index.html">MyElectronicProjects 0.0.0 documentation</a> &raquo;</li> 
       </ul>
