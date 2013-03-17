@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6876,11 +6876,17 @@ Marquardt, RAFI, ITT, and others&lt;p&gt;
 <attribute name="TP_SIGNAL_NAME" value=""/>
 </part>
 <part name="S1" library="switch-misc" deviceset="DT" device="6"/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="0207/10" value="6.8k 8W"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="0207/10" value="2.2k 3W"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="0207/10" value="2.2k 3W"/>
+<part name="R9" library="rcl" deviceset="R-EU_" device="0207/10" value="2.2k 3W"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="5.08" y="83.82" size="1.778" layer="91" rot="R180">30 mA</text>
+<text x="147.32" y="157.48" size="1.778" layer="91" rot="R180">3 mA</text>
+<text x="144.78" y="116.84" size="1.778" layer="91" rot="R180">3 mA</text>
+<text x="144.78" y="73.66" size="1.778" layer="91" rot="R180">3 mA</text>
 </plain>
 <instances>
 <instance part="R3" gate="G$1" x="71.12" y="172.72" rot="MR180"/>
@@ -6898,11 +6904,13 @@ Marquardt, RAFI, ITT, and others&lt;p&gt;
 <instance part="D5" gate="G$1" x="99.06" y="88.9"/>
 <instance part="D6" gate="G$1" x="116.84" y="73.66" rot="R90"/>
 <instance part="R6" gate="G$1" x="73.66" y="60.96" rot="MR180"/>
-<instance part="1" gate="G$1" x="30.48" y="152.4" rot="R270"/>
-<instance part="2" gate="G$1" x="30.48" y="139.7" rot="R270"/>
-<instance part="GND" gate="G$1" x="30.48" y="127" rot="R270"/>
+<instance part="1" gate="G$1" x="-7.62" y="165.1" rot="R270"/>
+<instance part="2" gate="G$1" x="-7.62" y="152.4" rot="R270"/>
+<instance part="GND" gate="G$1" x="-7.62" y="139.7" rot="R270"/>
 <instance part="S1" gate="1" x="17.78" y="83.82"/>
 <instance part="R7" gate="G$1" x="20.32" y="101.6" rot="MR90"/>
+<instance part="R8" gate="G$1" x="20.32" y="114.3" rot="MR90"/>
+<instance part="R9" gate="G$1" x="20.32" y="127" rot="MR90"/>
 </instances>
 <busses>
 </busses>
@@ -6941,8 +6949,8 @@ Marquardt, RAFI, ITT, and others&lt;p&gt;
 <label x="63.5" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="27.94" y1="127" x2="20.32" y2="127" width="0.1524" layer="91"/>
-<label x="20.32" y="127" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-10.16" y1="139.7" x2="-17.78" y2="139.7" width="0.1524" layer="91"/>
+<label x="-17.78" y="139.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="GND" gate="G$1" pin="TP"/>
 </segment>
 <segment>
@@ -6963,12 +6971,14 @@ Marquardt, RAFI, ITT, and others&lt;p&gt;
 <wire x1="68.58" y1="88.9" x2="63.5" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="20.32" y1="132.08" x2="20.32" y2="137.16" width="0.1524" layer="91"/>
+<label x="20.32" y="137.16" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
 <pinref part="1" gate="G$1" pin="TP"/>
-<wire x1="27.94" y1="152.4" x2="17.78" y2="152.4" width="0.1524" layer="91"/>
-<label x="17.78" y="152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="20.32" y1="111.76" x2="20.32" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<label x="20.32" y="111.76" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="-10.16" y1="165.1" x2="-20.32" y2="165.1" width="0.1524" layer="91"/>
+<label x="-20.32" y="165.1" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -7005,8 +7015,8 @@ Marquardt, RAFI, ITT, and others&lt;p&gt;
 <label x="63.5" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="27.94" y1="139.7" x2="17.78" y2="139.7" width="0.1524" layer="91"/>
-<label x="17.78" y="139.7" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-10.16" y1="152.4" x2="-20.32" y2="152.4" width="0.1524" layer="91"/>
+<label x="-20.32" y="152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="2" gate="G$1" pin="TP"/>
 </segment>
 </net>
@@ -7058,6 +7068,20 @@ Marquardt, RAFI, ITT, and others&lt;p&gt;
 <pinref part="S1" gate="1" pin="S@1"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="20.32" y1="96.52" x2="20.32" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="109.22" x2="20.32" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="121.92" x2="20.32" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
