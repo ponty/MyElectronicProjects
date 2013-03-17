@@ -6,9 +6,9 @@ Status: OK
 
 source: http://rclindia.tripod.com/trans.html
 
-.. image:: http://members.tripod.com/rclindia/2kmtx_ckt.gif
+.. image:: 2kmtx_ckt.png
 
-.. image:: http://members.tripod.com/rclindia/2kmtx_pcb.gif
+.. image:: 2kmtx_pcb.png
 
-.. image:: http://members.tripod.com/rclindia/2kmtx_lgd.gif
+.. image:: 2kmtx_lgd.png
 
