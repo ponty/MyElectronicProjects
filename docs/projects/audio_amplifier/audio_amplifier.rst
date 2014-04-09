@@ -1,6 +1,6 @@
-=======================
+===============
 audio amplifier
-=======================
+===============
 
 Status: under construction
 
@@ -85,9 +85,9 @@ Bottom
 
 
 Sources
------------
+-------
 
-`original design <http://alectronics.blogspot.com/2010/07/simple-radio-receiver-with-lm386-ic.html>`_
+`original design <http://www.mikroe.com/old/books/rrbook/chapter3/chapter3i.htm>`_
 
       .. image:: http://www.mikroe.com/old/books/rrbook/chapter3/24a.gif
 
