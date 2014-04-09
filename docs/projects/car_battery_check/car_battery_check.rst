@@ -24,7 +24,7 @@ Vref       ???       A4
 ..  ]]]
 
 Schematic
----------
+----------
 
       .. eagle-image:: car_battery_check.sch
                 :resolution: 150
@@ -34,7 +34,7 @@ Schematic
   \newpage % hard pagebreak at exactly this position 
 
 Board
------
+----------
 
 Normal, bottom mirrored, wires only:
 
@@ -52,37 +52,37 @@ Normal, bottom mirrored, wires only:
                 :layers: document, pads,vias, top, dimension
 
 Partlist
---------
+----------
 
       .. eagle-partlist:: car_battery_check.brd
             :header: part, value , position
 
 3D view
--------
+----------
 
------
+------------
 Front
------
+------------
 
       .. eagle-image3d:: car_battery_check.brd
 
-----------
+------------
 Right side
-----------
+------------
 
       .. eagle-image3d:: car_battery_check.brd
             :pcbrotate:  90,45,90
 
----------
+------------
 Left side
----------
+------------
 
       .. eagle-image3d:: car_battery_check.brd
             :pcbrotate:  90,-45,-90
 
-------
+------------
 Bottom
-------
+------------
 
       .. eagle-image3d:: car_battery_check.brd
             :pcbrotate:  0,0,180
